@@ -17,6 +17,7 @@ const StyledHeader = styled.header`
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  z-index: 1000;
 `;
 
 const StyledNav = styled.nav`

@@ -5,12 +5,13 @@ import styled from "styled-components";
 import { config } from "@/app/config";
 
 const StyledHeroSection = styled.section`
+  display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: flex-start;
   min-height: 100vh;
   height: 100vh;
-  padding: 0;
-
+  padding: 0px;
   h1 {
     color: var(--color-grey-500);
     margin: 0 0 20px 5px;

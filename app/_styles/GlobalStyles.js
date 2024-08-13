@@ -131,7 +131,7 @@ const GlobalStyle = createGlobalStyle`
       counter-increment: section;
       content: '0' counter(section) '.';
       margin-right: 10px;
-      color: var(--color-green-100);
+      color: var(--color-grey-500);
       font-size: clamp(var(--fs-md), 3vw, var(--fs-xl));
       font-weight: 400;
 

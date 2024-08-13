@@ -11,6 +11,7 @@ import Contact from "@/app/_components/sections/Contact";
 
 const StyledMainContainer = styled.main`
   counter-reset: section;
+  padding: 0px 150px;
 `;
 
 export default function Home() {

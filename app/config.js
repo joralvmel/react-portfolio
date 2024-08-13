@@ -1,4 +1,8 @@
 "use client";
+
+import profile from "@/public/profile.jpg";
+import Image from "next/image";
+
 import {
   FaReact,
   FaGithub,
@@ -26,6 +30,48 @@ export const config = {
       </p>
     </>
   ),
+
+  about: {
+    section: <h2 className="numbered-heading">About Me</h2>,
+    text: (
+      <div>
+        <p>
+          Hello! My name is Jorge and I am a Software Developer proficient in
+          debugging, error correction, introducing new functionalities, and
+          skilled in full stack development mainly focused on React Web
+          Applications.
+        </p>
+
+        <p>
+          My consultancy background equips me with strong client management
+          skills, adaptable to various industries and countries. I excel at
+          working under pressure in collaborative teams with great time
+          management.
+        </p>
+
+        <p>
+          In summary, I bring extensive process improvement, client management,
+          teamwork skills, automation, and full stack development expertise to
+          the table, all supported by a commitment to lifelong learning.
+        </p>
+
+        <p>Here are a few technologies I’ve been working with recently:</p>
+      </div>
+    ),
+
+    skills: [
+      "JavaScript (ES6+)",
+      "React",
+      "Next.js",
+      "HTML & CSS",
+      "Node.js",
+      "Java",
+    ],
+
+    image: (
+      <Image src={profile} fill quality={80} alt={`Profile picture of me`} />
+    ),
+  },
 
   socialMedia: [
     {
