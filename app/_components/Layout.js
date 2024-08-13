@@ -1,10 +1,10 @@
 "use client";
 
 import styled from "styled-components";
-import GlobalStyles from "@/app//styles/GlobalStyles";
-import Nav from "./Nav";
+import GlobalStyles from "@/app/_styles/GlobalStyles";
 import Social from "./Social";
 import Footer from "./Footer";
+import Header from "./Header";
 
 const StyledContent = styled.div`
   display: flex;
@@ -17,7 +17,7 @@ function Layout({ children }) {
     <div id="root">
       <GlobalStyles />
       <StyledContent>
-        <Nav />
+        <Header />
         <Social />
 
         <div id="content">

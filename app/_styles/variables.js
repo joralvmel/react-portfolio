@@ -81,6 +81,7 @@ const variables = css`
     }
 
     //Fonts
+    --fs-xxxs: 10px;
     --fs-xxs: 12px;
     --fs-xs: 13px;
     --fs-sm: 14px;
@@ -91,11 +92,16 @@ const variables = css`
     --fs-heading: 32px;
 
     --border-radius: 4px;
-    --nav-height: 100px;
     --nav-scroll-height: 70px;
 
     --tab-height: 42px;
     --tab-width: 120px;
+
+    //Buttons
+    --color-primary: var(--color-blue-700);
+    --color-primary-light: var(--color-blue-100);
+    --color-secondary: var(--color-green-700);
+    --color-secondary-light: var(--color-green-100);
   }
 `;
 

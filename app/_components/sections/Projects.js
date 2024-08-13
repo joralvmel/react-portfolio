@@ -36,7 +36,7 @@ const StyledProjectsSection = styled.section`
 `;
 
 function Projects() {
-  return <StyledProjectsSection>Projects</StyledProjectsSection>;
+  return <StyledProjectsSection id="projects">Projects</StyledProjectsSection>;
 }
 
 export default Projects;

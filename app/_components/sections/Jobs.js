@@ -2,7 +2,7 @@
 
 import styled from "styled-components";
 
-const StyledJobsSection = styled.section`
+const StyledExperienceSection = styled.section`
   max-width: 700px;
 
   .inner {
@@ -18,8 +18,12 @@ const StyledJobsSection = styled.section`
   }
 `;
 
-function Jobs() {
-  return <StyledJobsSection>Jobs</StyledJobsSection>;
+function Experience() {
+  return (
+    <StyledExperienceSection id="experience">
+      Experience
+    </StyledExperienceSection>
+  );
 }
 
-export default Jobs;
+export default Experience;
