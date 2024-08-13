@@ -19,7 +19,6 @@ function Layout({ children }) {
       <StyledContent>
         <Header />
         <Social />
-
         <div id="content">
           {children}
           <Footer />

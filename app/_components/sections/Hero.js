@@ -2,6 +2,8 @@
 
 import styled from "styled-components";
 
+import { config } from "@/app/config";
+
 const StyledHeroSection = styled.section`
   flex-direction: column;
   align-items: flex-start;
@@ -9,40 +11,32 @@ const StyledHeroSection = styled.section`
   height: 100vh;
   padding: 0;
 
-  @media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
-    height: auto;
-    padding-top: var(--nav-height);
+  h1 {
+    color: var(--color-grey-500);
+    margin: 0 0 20px 5px;
+    font-size: var(--fs-lg);
+    font-weight: 400;
   }
 
-  h1 {
-    margin: 0 0 30px 4px;
-    color: var(--color-green-100);
-    font-size: clamp(var(--fs-sm), 5vw, var(--fs-md));
+  h2 {
+    color: var(--color-grey-500);
+    margin: 0 0 40px 4px;
     font-weight: 400;
-
-    @media (max-width: 480px) {
-      margin: 0 0 20px 2px;
-    }
   }
 
   h3 {
-    margin-top: 5px;
     color: var(--color-grey-400);
-    line-height: 0.9;
   }
 
   p {
-    margin: 20px 0 0;
-    max-width: 540px;
-  }
-
-  .email-link {
-    margin-top: 50px;
+    color: var(--color-grey-400);
+    margin: 40px 0 0;
+    max-width: 640px;
   }
 `;
 
 function Hero() {
-  return <StyledHeroSection>Hero</StyledHeroSection>;
+  return <StyledHeroSection>{config.hero}</StyledHeroSection>;
 }
 
 export default Hero;

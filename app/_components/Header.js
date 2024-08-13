@@ -71,7 +71,7 @@ function Header() {
           ))}
         </StyledLinks>
       </StyledNav>
-      <Button>Resume</Button>
+      <Button>{config.buttons[0]}</Button>
     </StyledHeader>
   );
 }
