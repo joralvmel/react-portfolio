@@ -3,6 +3,8 @@
 import styled from "styled-components";
 import Side from "./Side";
 
+import { config } from "@/app/config";
+
 const StyledSocialList = styled.ul`
   display: flex;
   flex-direction: column;
@@ -15,8 +17,7 @@ const StyledSocialList = styled.ul`
     content: "";
     display: block;
     width: 1px;
-    height: 90px;
-    margin: 0 auto;
+    height: 60px;
     background-color: var(--color-grey-500);
   }
 
@@ -28,14 +29,12 @@ const StyledSocialList = styled.ul`
     a {
       padding: 10px;
 
-      &:hover,
-      &:focus {
-        transform: translateY(-3px);
+      &:hover {
+        color: var(--color-grey-500);
       }
-
       svg {
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 15px;
       }
     }
   }
@@ -45,15 +44,18 @@ function Social() {
   return (
     <Side>
       <StyledSocialList>
-        <li>
-          <a> SocialLink 1</a>
-        </li>
-        <li>
-          <a> SocialLink 2</a>
-        </li>
-        <li>
-          <a> SocialLink 3</a>
-        </li>
+        {config.socialMedia.map((social, index) => (
+          <li key={index}>
+            <a
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={social.name}
+            >
+              {social.icon}
+            </a>
+          </li>
+        ))}
       </StyledSocialList>
     </Side>
   );

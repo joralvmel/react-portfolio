@@ -3,8 +3,9 @@
 import styled from "styled-components";
 import Logo from "./Logo";
 import Link from "next/link";
-import { config } from "@/app/config";
 import Button from "./Button";
+
+import { config } from "@/app/config";
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -49,9 +50,7 @@ const StyledLinks = styled.ul`
         font-size: var(--fs-xxs);
         text-align: right;
       }
-      &:hover {
-        color: var(--color-grey-500);
-      }
+      &:hover,
       &:focus {
         color: var(--color-grey-500);
       }

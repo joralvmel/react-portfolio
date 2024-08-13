@@ -21,31 +21,6 @@ const GlobalStyle = createGlobalStyle`
     color: var(--color-grey-300);
   }
 
-  /* Provide basic, default focus styles.*/
-  :focus {
-    outline: 2px dashed var(--color-green-100);
-    outline-offset: 3px;
-  }
-
-  /*
-    Remove default focus styles for mouse users ONLY if
-    :focus-visible is supported on this platform.
-  */
-  :focus:not(:focus-visible) {
-    outline: none;
-    outline-offset: 0px;
-  }
-
-  /*
-    Optionally: If :focus-visible is supported on this
-    platform, provide enhanced focus styles for keyboard
-    focus.
-  */
-  :focus-visible {
-    outline: 2px dashed var(--color-green-100);
-    outline-offset: 3px;
-  }
-
   /* Scrollbar Styles */
   html {
     scrollbar-width: thin;
@@ -74,10 +49,6 @@ const GlobalStyle = createGlobalStyle`
     color: var(--color-grey-300);
     font-size: var(--fs-xl);
     line-height: 1.3;
-
-    @media (max-width: 480px) {
-      font-size: var(--fs-lg);
-    }
 
     &.hidden {
       overflow: hidden;
@@ -112,28 +83,8 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
     padding: 200px 150px;
 
-    @media (max-width: 1080px) {
-      padding: 200px 100px;
-    }
-    @media (max-width: 768px) {
-      padding: 150px 50px;
-    }
-    @media (max-width: 480px) {
-      padding: 125px 25px;
-    }
-
     &.fillHeight {
       padding: 0 150px;
-
-      @media (max-width: 1080px) {
-        padding: 0 100px;
-      }
-      @media (max-width: 768px) {
-        padding: 0 50px;
-      }
-      @media (max-width: 480px) {
-        padding: 0 25px;
-      }
     }
   }
 
@@ -141,14 +92,6 @@ const GlobalStyle = createGlobalStyle`
     margin: 0 auto;
     padding: 100px 0;
     max-width: 1000px;
-
-    @media (max-width: 768px) {
-      padding: 80px 0;
-    }
-
-    @media (max-width: 480px) {
-      padding: 60px 0;
-    }
   }
 
   h1,
@@ -207,16 +150,6 @@ const GlobalStyle = createGlobalStyle`
       height: 1px;
       margin-left: 20px;
       background-color: var(--color-grey-200);
-
-      @media (max-width: 1080px) {
-        width: 200px;
-      }
-      @media (max-width: 768px) {
-        width: 100%;
-      }
-      @media (max-width: 600px) {
-        margin-left: 10px;
-      }
     }
   }
 
@@ -252,7 +185,7 @@ const GlobalStyle = createGlobalStyle`
 
     &:hover,
     &:focus {
-      color: var(--color-green-100);
+      color: var(--color-grey-400);
     }
   }
 
@@ -308,14 +241,14 @@ const GlobalStyle = createGlobalStyle`
           content: '▹';
           position: absolute;
           left: 0;
-          color: var(--color-green-100);
+          color: var(--color-grey-100);
         }
       }
     }
   }
 
   blockquote {
-    border-left-color: var(--color-green-100);
+    border-left-color: var(--color-grey-100);
     border-left-style: solid;
     border-left-width: 1px;
     margin-left: 0px;
@@ -342,42 +275,21 @@ const GlobalStyle = createGlobalStyle`
     font-size: var(--fs-md);
   }
 
-  #logo {
-    color: var(--color-green-100);
-  }
-
   .overline {
-    color: var(--color-green-100);
+    color: var(--color-grey-100);
     font-size: var(--fs-md);
     font-weight: 400;
   }
 
   .subtitle {
-    color: var(--color-green-100);
+    color: var(--color-greys-100);
     margin: 0 0 20px 0;
     font-size: var(--fs-md);
     font-weight: 400;
     line-height: 1.5;
-    @media (max-width: 1080px) {
-      font-size: var(--fs-sm);
-    }
-    @media (max-width: 768px) {
-      font-size: var(--fs-xs);
-    }
   }
 
-  .breadcrumb {
-    display: flex;
-    align-items: center;
-    margin-bottom: 50px;
-    color: var(--color-green-100);
 
-    .arrow {
-      display: block;
-      margin-right: 10px;
-      padding-top: 4px;
-    }
-  }
 
 `;
 
