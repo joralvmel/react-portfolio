@@ -135,10 +135,7 @@ const GlobalStyle = createGlobalStyle`
       font-size: clamp(var(--fs-md), 3vw, var(--fs-xl));
       font-weight: 400;
 
-      @media (max-width: 480px) {
-        margin-bottom: -3px;
-        margin-right: 5px;
-      }
+  
     }
 
     &:after {

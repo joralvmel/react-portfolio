@@ -13,6 +13,7 @@ import {
   FaInstagram,
   FaXTwitter,
   FaLinkedinIn,
+  FaRegFolder,
 } from "react-icons/fa6";
 
 import { FaExternalLinkAlt } from "react-icons/fa";
@@ -20,7 +21,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 export const config = {
   email: "joralvmel@gmail.com",
   logo: <FaReact />,
-  buttons: ["Resume", "CV"],
+  buttons: ["Resume", "Show More", "Show Less"],
 
   hero: (
     <>
@@ -369,6 +370,68 @@ export const config = {
           title: "Live view",
           icon: <FaExternalLinkAlt />,
         },
+      },
+    ],
+  },
+
+  otherProjects: {
+    header: "Other Projects",
+    icon: <FaRegFolder />,
+    githubIcon: <FaGithub />,
+    externalIcon: <FaExternalLinkAlt />,
+    projects: [
+      {
+        title: "Simon",
+        description: "Simon says game built with HTML, CSS, and JavaScript.",
+        technologies: ["HTML", "CSS", "JavaScript"],
+        github: "https://github.com/joralvmel/simon",
+        external: "https://joralvmel.github.io/simon/",
+      },
+      {
+        title: "Watchlist App",
+        description:
+          "An application to keek track of your TV Shows and Movies watchlists",
+        technologies: ["EJS", "Javascript", "CSS", "Node.js"],
+        github: "https://github.com/joralvmel/watchlist-app",
+        external: "https://joralvmel-watchlist-app.onrender.com/",
+      },
+      {
+        title: "Forkify",
+        description:
+          "An application to search for recipes, add your own and bookmark them.",
+        technologies: ["JavaScript", "HTML", "SCSS", "API"],
+        github: "https://github.com/joralvmel/forkify",
+        external: "https://forkify-joralvmel.netlify.app/",
+      },
+      {
+        title: "React Tic-Tac-Toe",
+        description: "A simple Tic Tac Toe game built with React.",
+        technologies: ["React", "JavaScript", "CSS", "Node.js"],
+        github: "https://github.com/joralvmel/react-tic-tac-toe",
+        external: "https://react-tic-tac-toe-joralvmel.netlify.app/",
+      },
+      {
+        title: "Worldwise",
+        description:
+          "An application for keeping track of you visited cities all arround the wolrd",
+        technologies: ["React", "JavaScript", "CSS", "Node.js"],
+        github: "https://github.com/joralvmel/worldwise",
+        external: "https://react-worldwise-joralvmel.netlify.app/",
+      },
+      {
+        title: "React Quiz",
+        description: "A simple quiz application built with React.",
+        technologies: ["React", "JavaScript", "CSS", "Node.js"],
+        github: "https://github.com/joralvmel/react-quiz?tab=readme-ov-file",
+        external: "https://react-quiz-joralvmel.netlify.app/",
+      },
+      {
+        title: "Fast React Pizza",
+        description:
+          "A simple pizza ordering application built with React and Tailwind CSS.",
+        technologies: ["React", "JavaScript", "Tailwind CSS", "Node.js"],
+        github: "https://github.com/joralvmel/fast-react-pizza-tailwind",
+        external: "https://fast-react-pizza-tailwind-joralvmel.netlify.app/",
       },
     ],
   },

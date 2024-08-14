@@ -20,7 +20,7 @@ const StyledProject = styled.li`
   align-items: center;
 
   &:not(:last-of-type) {
-    margin-bottom: 100px;
+    margin-bottom: 0;
   }
 
   &:nth-of-type(odd) {
