@@ -2,7 +2,7 @@
 
 import Hero from "./Hero";
 import About from "./About";
-import Jobs from "./Jobs";
+import Experience from "./Experience";
 import Featured from "./Featured";
 import Projects from "./Projects";
 import Contact from "./Contact";
@@ -12,7 +12,7 @@ function Content() {
     <div id="content">
       <Hero />
       <About />
-      <Jobs />
+      <Experience />
       <Featured />
       <Projects />
       <Contact />

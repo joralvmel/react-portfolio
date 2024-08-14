@@ -76,7 +76,7 @@ const StyledPic = styled.div`
 function About() {
   return (
     <StyledAboutSection id="about">
-      {config.about.section}
+      {config.about.header}
 
       <div className="inner">
         <StyledText>
