@@ -182,11 +182,6 @@ const GlobalStyle = createGlobalStyle`
     text-decoration-skip-ink: auto;
     color: inherit;
     position: relative;
-
-    &:hover,
-    &:focus {
-      color: var(--color-grey-400);
-    }
   }
 
   button {

@@ -52,13 +52,6 @@ const StyledPic = styled.div`
   max-width: 300px;
   aspect-ratio: 1 / 1;
 
-  .wrapper {
-    display: block;
-    position: relative;
-    width: 100%;
-    background-color: var(--color-grey-500);
-  }
-
   &:after {
     content: "";
     display: block;

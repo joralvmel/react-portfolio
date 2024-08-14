@@ -51,6 +51,7 @@ function Social() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={social.name}
+              title={social.content}
             >
               {social.icon}
             </a>

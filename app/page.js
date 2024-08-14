@@ -5,8 +5,8 @@ import Layout from "@/app/_components/Layout";
 import Hero from "@/app/_components/sections/Hero";
 import About from "@/app/_components/sections/About";
 import Experience from "@/app/_components/sections/Experience";
-import Featured from "@/app/_components/sections/Featured";
 import Projects from "@/app/_components/sections/Projects";
+import OtherProjects from "@/app/_components/sections/OtherProjects";
 import Contact from "@/app/_components/sections/Contact";
 
 const StyledMainContainer = styled.main`
@@ -21,8 +21,8 @@ export default function Home() {
         <Hero />
         <About />
         <Experience />
-        <Featured />
         <Projects />
+        <OtherProjects />
         <Contact />
       </StyledMainContainer>
     </Layout>
