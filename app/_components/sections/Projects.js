@@ -125,15 +125,18 @@ function Projects() {
       {config.projects.header}
       <ul>
         {config.projects.content.map(
-          ({ title, description, tech, github, external, image }, i) => (
+          (
+            { title, description, technologies, github, external, image },
+            i
+          ) => (
             <StyledProject key={i}>
               <div className="project-content">
                 <p className="project-overline">Featured Project</p>
                 <h3 className="project-title">{title}</h3>
                 <div className="project-description">{description}</div>
                 <ul className="project-tech-list">
-                  {tech.map((techItem, i) => (
-                    <li key={i}>{techItem}</li>
+                  {technologies.map((technology, i) => (
+                    <li key={i}>{technology}</li>
                   ))}
                 </ul>
                 <div className="project-links">
@@ -159,7 +162,19 @@ function Projects() {
                   )}
                 </div>
               </div>
-              <StyledPic>{image}</StyledPic>
+              <StyledPic>
+                {" "}
+                {external && (
+                  <a
+                    href={external.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={external.title}
+                  >
+                    {image}
+                  </a>
+                )}
+              </StyledPic>
             </StyledProject>
           )
         )}

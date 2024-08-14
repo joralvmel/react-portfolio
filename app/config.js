@@ -255,8 +255,8 @@ export const config = {
       {
         title: "The Wild Oasis",
         description:
-          "An application designed for managing check-ins and check-outs at a boutique hotel, including a dashboard for administrators and other configuration options for the hotel staff.",
-        tech: [
+          "An application designed for managing check-ins and check-outs in a boutique hotel, including a dashboard for administrators and other configuration options for the hotel staff.",
+        technologies: [
           "React",
           "Node.js",
           "Styled Components",
@@ -265,20 +265,14 @@ export const config = {
           "Recharts",
         ],
         image: (
-          <a
-            href="https://react-the-wild-oasis-nine.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src={theWildOasis}
-              layout="responsive"
-              width={700}
-              height={475}
-              quality={80}
-              alt={`The Wild Oasis Dashboard`}
-            />
-          </a>
+          <Image
+            src={theWildOasis}
+            layout="responsive"
+            width={700}
+            height={475}
+            quality={80}
+            alt={`The Wild Oasis Dashboard`}
+          />
         ),
         github: {
           url: "https://github.com/joralvmel/react-the-wild-oasis",
@@ -295,7 +289,7 @@ export const config = {
         title: "The Wild Oasis Website",
         description:
           "A website designed for a boutique hotel, including a booking system, login functionallity with reservation an user management.",
-        tech: [
+        technologies: [
           "React",
           "Node.js",
           "Next.js",
@@ -304,20 +298,14 @@ export const config = {
           "NextAuth",
         ],
         image: (
-          <a
-            href="https://the-wild-oasis-website-eta-eight.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src={theWildOasisWebsite}
-              layout="responsive"
-              width={700}
-              height={475}
-              quality={80}
-              alt={`The Wild Oasis main screen`}
-            />
-          </a>
+          <Image
+            src={theWildOasisWebsite}
+            layout="responsive"
+            width={700}
+            height={475}
+            quality={80}
+            alt={`The Wild Oasis main screen`}
+          />
         ),
         github: {
           url: "https://github.com/joralvmel/the-wild-oasis-website",
@@ -334,22 +322,16 @@ export const config = {
         title: "React Connect Four",
         description:
           "A simple Connect Four game built with React, where two players can play against each other.",
-        tech: ["React", "CSS", "Node.js"],
+        technologies: ["React", "CSS", "Node.js"],
         image: (
-          <a
-            href="https://react-conncect-four-joralvmel.netlify.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src={connectFour}
-              layout="responsive"
-              width={700}
-              height={475}
-              quality={80}
-              alt={`Connect Four Game`}
-            />
-          </a>
+          <Image
+            src={connectFour}
+            layout="responsive"
+            width={700}
+            height={475}
+            quality={80}
+            alt={`Connect Four Game`}
+          />
         ),
         github: {
           url: "https://github.com/joralvmel/react-connect-four",
@@ -366,22 +348,16 @@ export const config = {
         title: "Watchlist API",
         description:
           "An application for keeping track of your favorite Movies and TV Shows with the functionallity of creating Watchlists, and providing Movie or TV Show information.",
-        tech: ["EJS", "CSS", "Node.js", "jQuery", "API"],
+        technologies: ["EJS", "CSS", "Node.js", "jQuery", "API"],
         image: (
-          <a
-            href="https://joralvmel-watchlist-api.onrender.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src={watchlist}
-              layout="responsive"
-              width={700}
-              height={475}
-              quality={80}
-              alt={`Warchlist API Dashboard`}
-            />
-          </a>
+          <Image
+            src={watchlist}
+            layout="responsive"
+            width={700}
+            height={475}
+            quality={80}
+            alt={`Warchlist API Dashboard`}
+          />
         ),
         github: {
           url: "https://github.com/joralvmel/watchlist-api",
