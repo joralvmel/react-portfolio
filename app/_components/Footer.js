@@ -1,5 +1,7 @@
 "use client";
 
+import { config } from "@/app/config";
+
 import styled from "styled-components";
 
 const StyledFooter = styled.footer`
@@ -8,32 +10,6 @@ const StyledFooter = styled.footer`
   min-height: 70px;
   padding: 15px;
   text-align: center;
-`;
-
-const StyledSocialLinks = styled.div`
-  display: none;
-
-  @media (max-width: 768px) {
-    display: block;
-    width: 100%;
-    max-width: 270px;
-    margin: 0 auto 10px;
-    color: var(--color-grey-500);
-  }
-
-  ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-
-    a {
-      padding: 10px;
-      svg {
-        width: 20px;
-        height: 20px;
-      }
-    }
-  }
 `;
 
 const StyledCredit = styled.div`
@@ -63,19 +39,12 @@ const StyledCredit = styled.div`
 `;
 
 function Footer() {
+  const { text, url } = config.footer;
   return (
     <StyledFooter>
-      <StyledSocialLinks>
-        <ul>
-          <li>FooterLink 1</li>
-          <li>FooterLink 2</li>
-          <li>FooterLink 3</li>
-        </ul>
-      </StyledSocialLinks>
-
       <StyledCredit>
-        <a href="https://github.com/joralvmel/react-portfolio">
-          <div>Designed &amp; Built by Jorge Alvarez</div>
+        <a href={url} target="_blank" rel="noopener noreferrer">
+          <div>{text}</div>
         </a>
       </StyledCredit>
     </StyledFooter>

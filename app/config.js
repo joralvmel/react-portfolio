@@ -443,6 +443,11 @@ export const config = {
     email: "joralvmel@gmail.com",
   },
 
+  footer: {
+    text: "Built by Jorge Alvarez",
+    url: "https://github.com/joralvmel/react-portfolio",
+  },
+
   socialMedia: [
     {
       content: "GitHub",
