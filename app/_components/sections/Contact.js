@@ -1,26 +1,28 @@
 "use client";
 
+import { config } from "@/app/config";
 import styled from "styled-components";
 
 const StyledContactSection = styled.section`
-  max-width: 600px;
+  max-width: 900px;
   margin: 0 auto 100px;
   text-align: center;
 
-  @media (max-width: 768px) {
-    margin: 0 auto 50px;
+  h2 {
+    font-size: var(--fs-heading);
+    color: var(--color-grey-500);
   }
 
   .overline {
     display: block;
     margin-bottom: 20px;
-    color: var(--color-green-100);
+    color: var(--color-grey-500);
     font-size: var(--fs-md);
     font-weight: 400;
 
     &:before {
       bottom: 0;
-      font-size: var(--fz-sm);
+      font-size: var(--fs-sm);
     }
 
     &:after {
@@ -29,7 +31,8 @@ const StyledContactSection = styled.section`
   }
 
   .title {
-    font-size: clamp(40px, 5vw, 60px);
+    font-size: var(--fs-heading);
+    color: var(--color-grey-400);
   }
 
   .email-link {
@@ -38,11 +41,19 @@ const StyledContactSection = styled.section`
 `;
 
 function Contact() {
+  const { header, title, email, text } = config.contact;
+
   return (
     <StyledContactSection id="contact">
-      <h2 className="numbered-heading overline">What’s Next?</h2>
+      <h2 className="numbered-heading">{header}</h2>
 
-      <h2 className="title">Get In Touch</h2>
+      <h2 className="title">{title}</h2>
+
+      <p>{text}</p>
+
+      <a className="email-link" href={`mailto:${email}`}>
+        {email}
+      </a>
     </StyledContactSection>
   );
 }
