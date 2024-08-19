@@ -3,6 +3,7 @@
 import styled from "styled-components";
 
 import { config } from "@/app/config";
+import AboutText from "../AboutText";
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
@@ -18,35 +19,6 @@ const StyledAboutSection = styled.section`
   }
 `;
 
-const StyledText = styled.div`
-  color: var(--color-grey-500);
-  width: 100%;
-
-  ul.skills-list {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(140px, 200px));
-    grid-gap: 0 10px;
-    padding: 0;
-    list-style: none;
-    color: var(--color-grey-500);
-
-    li {
-      position: relative;
-      margin-bottom: 0px;
-      padding-left: 20px;
-      font-size: var(--fs-xs);
-
-      &:before {
-        content: "▹";
-        position: absolute;
-        left: 0;
-        color: var(--color-grey-500);
-        font-size: var(--fs-sm);
-        line-height: 12px;
-      }
-    }
-  }
-`;
 const StyledPic = styled.div`
   position: relative;
   max-width: 300px;
@@ -67,21 +39,16 @@ const StyledPic = styled.div`
 `;
 
 function About() {
+  const { header, text, skills } = config.about;
+  const { profile } = config.images;
+
   return (
     <StyledAboutSection id="about">
-      {config.about.header}
+      <h2 className="numbered-heading">{header}</h2>
 
       <div className="inner">
-        <StyledText>
-          {config.about.text}
-
-          <ul className="skills-list">
-            {config.about.skills.map((skill, i) => (
-              <li key={i}>{skill}</li>
-            ))}
-          </ul>
-        </StyledText>
-        <StyledPic>{config.about.image}</StyledPic>
+        <AboutText text={text} skills={skills} />
+        <StyledPic>{profile}</StyledPic>
       </div>
     </StyledAboutSection>
   );

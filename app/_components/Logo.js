@@ -18,10 +18,11 @@ const StyledLogo = styled.div`
 `;
 
 function Logo() {
+  const { logo } = config.icons;
   return (
     <StyledLogo className="logo">
       <Link href="/" aria-label="home">
-        {config.logo}
+        {logo}
       </Link>
     </StyledLogo>
   );

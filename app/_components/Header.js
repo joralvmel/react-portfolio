@@ -60,6 +60,7 @@ const StyledLinks = styled.ul`
 `;
 
 function Header() {
+  const { resume } = config.buttons;
   return (
     <StyledHeader>
       <StyledNav>
@@ -72,7 +73,7 @@ function Header() {
           ))}
         </StyledLinks>
       </StyledNav>
-      <Button>{config.buttons[0]}</Button>
+      <Button>{resume}</Button>
     </StyledHeader>
   );
 }

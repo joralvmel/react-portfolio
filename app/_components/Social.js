@@ -41,19 +41,20 @@ const StyledSocialList = styled.ul`
 `;
 
 function Social() {
+  const { socialMedia } = config;
   return (
     <Side>
       <StyledSocialList>
-        {config.socialMedia.map((social, index) => (
-          <li key={index}>
+        {socialMedia.map(({ url, name, content, icon }, i) => (
+          <li key={i}>
             <a
-              href={social.url}
+              href={url}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={social.name}
-              title={social.content}
+              aria-label={name}
+              title={content}
             >
-              {social.icon}
+              {icon}
             </a>
           </li>
         ))}

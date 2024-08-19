@@ -37,7 +37,15 @@ const StyledHeroSection = styled.section`
 `;
 
 function Hero() {
-  return <StyledHeroSection>{config.hero}</StyledHeroSection>;
+  const { title, name, header, text } = config.hero;
+  return (
+    <StyledHeroSection>
+      <h1>{title}</h1>
+      <h2 className="big-heading">{name}</h2>
+      <h3 className="medium-heading">{header}</h3>
+      <p>{text}</p>
+    </StyledHeroSection>
+  );
 }
 
 export default Hero;
