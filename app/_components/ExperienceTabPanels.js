@@ -9,12 +9,10 @@ const StyledExperienceTabPanels = styled.div`
   margin-left: 20px;
 `;
 
-function ExperienceTabPanels({ jobs }) {
+function ExperienceTabPanels({ jobs, selectedTab }) {
   return (
     <StyledExperienceTabPanels>
-      {jobs.map((job, i) => (
-        <ExperienceTabPanel key={i} job={job} />
-      ))}
+      {jobs[selectedTab] && <ExperienceTabPanel job={jobs[selectedTab]} />}
     </StyledExperienceTabPanels>
   );
 }

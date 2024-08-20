@@ -5,6 +5,7 @@ import TechList from "./TechList";
 
 const StyledText = styled.div`
   color: var(--color-secondary);
+  font-size: var(--fs-lg);
   width: 100%;
 `;
 

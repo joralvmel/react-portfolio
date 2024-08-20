@@ -29,8 +29,9 @@ const StyledHeroSection = styled.section`
     color: var(--color-secondary);
   }
 
-  p {
+  .text {
     color: var(--color-secondary);
+    font-size: var(--fs-lg);
     margin: 40px 0 0;
     max-width: 640px;
   }
@@ -43,7 +44,7 @@ function Hero() {
       <h1>{title}</h1>
       <h2 className="big-heading">{name}</h2>
       <h3 className="medium-heading">{header}</h3>
-      <p>{text}</p>
+      <p className="text">{text}</p>
     </StyledHeroSection>
   );
 }

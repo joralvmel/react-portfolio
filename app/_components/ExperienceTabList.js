@@ -21,17 +21,28 @@ const StyledTabButton = styled.button`
   white-space: nowrap;
 
   &:hover,
-  &:focus {
-    border-bottom: 2px solid var(--color-accent);
+  &:focus,
+  &.selected {
     color: var(--color-text-light);
+  }
+
+  &:focus,
+  &.selected {
+    border-right: 2px solid var(--color-accent);
   }
 `;
 
-function ExperienceTabList({ jobs }) {
+function ExperienceTabList({ jobs, handleTabClick, selectedTab }) {
   return (
     <StyledExperienceTabList>
       {jobs.map(({ company }, i) => (
-        <StyledTabButton key={i}>{company}</StyledTabButton>
+        <StyledTabButton
+          key={i}
+          onClick={() => handleTabClick(i)}
+          className={selectedTab === i ? "selected" : ""}
+        >
+          {company}
+        </StyledTabButton>
       ))}
     </StyledExperienceTabList>
   );

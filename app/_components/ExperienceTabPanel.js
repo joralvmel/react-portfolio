@@ -21,6 +21,10 @@ const StyledExperienceTabPanel = styled.div`
     }
   }
 
+  .description {
+    font-size: var(--fs-md);
+  }
+
   .range {
     margin-bottom: 25px;
     color: var(--color-text-light);
@@ -40,7 +44,7 @@ function ExperienceTabPanel({ job }) {
       <p className="range">
         {startDate} - {endDate}
       </p>
-      <ul>
+      <ul className="description">
         {description.map((p, i) => (
           <li key={i}>{p}</li>
         ))}
