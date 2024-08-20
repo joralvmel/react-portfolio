@@ -28,12 +28,12 @@ const StyledExperienceTabPanel = styled.div`
   }
 `;
 
-function ExperienceTabPanel({ job, key }) {
+function ExperienceTabPanel({ job }) {
   const { position, company, startDate, endDate, description, technologies } =
     job;
 
   return (
-    <StyledExperienceTabPanel key={key}>
+    <StyledExperienceTabPanel>
       <h3>
         {position} <span className="company"> - {company}</span>
       </h3>
@@ -42,9 +42,7 @@ function ExperienceTabPanel({ job, key }) {
       </p>
       <ul>
         {description.map((p, i) => (
-          <li key={i} id={i}>
-            {p}
-          </li>
+          <li key={i}>{p}</li>
         ))}
       </ul>
 

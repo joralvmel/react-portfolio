@@ -13,7 +13,7 @@ function ExperienceTabPanels({ jobs }) {
   return (
     <StyledExperienceTabPanels>
       {jobs.map((job, i) => (
-        <ExperienceTabPanel key={i} job={job}></ExperienceTabPanel>
+        <ExperienceTabPanel key={i} job={job} />
       ))}
     </StyledExperienceTabPanels>
   );

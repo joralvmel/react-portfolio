@@ -56,7 +56,13 @@ export const config = {
       "Java",
     ],
     profilePic: (
-      <Image src={profilePic} fill quality={90} alt={`Profile picture of me`} />
+      <Image
+        src={profilePic}
+        fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        quality={90}
+        alt={`Profile picture of me`}
+      />
     ),
   },
 
@@ -177,9 +183,8 @@ export const config = {
         image: (
           <Image
             src={theWildOasis}
-            layout="responsive"
-            width={700}
-            height={475}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             quality={80}
             alt={`The Wild Oasis Dashboard`}
           />
@@ -202,9 +207,8 @@ export const config = {
         image: (
           <Image
             src={theWildOasisWebsite}
-            layout="responsive"
-            width={700}
-            height={475}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             quality={80}
             alt={`The Wild Oasis main screen`}
           />
@@ -220,9 +224,8 @@ export const config = {
         image: (
           <Image
             src={connectFour}
-            layout="responsive"
-            width={700}
-            height={475}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             quality={80}
             alt={`Connect Four Game`}
           />
@@ -238,9 +241,8 @@ export const config = {
         image: (
           <Image
             src={watchlist}
-            layout="responsive"
-            width={700}
-            height={475}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             quality={80}
             alt={`Watchlist API Dashboard`}
           />

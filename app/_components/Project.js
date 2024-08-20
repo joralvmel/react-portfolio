@@ -4,7 +4,6 @@ import styled from "styled-components";
 
 import TechList from "./TechList";
 import ProjectLinks from "./ProjectLinks";
-import { config } from "../config";
 
 const StyledProject = styled.li`
   position: relative;
@@ -70,6 +69,8 @@ const StyledPic = styled.div`
   overflow: hidden;
 
   a {
+    width: 100%;
+    height: 100%;
     filter: brightness(60%);
     transition: filter 0.3s ease-in-out;
     &:hover {
@@ -78,7 +79,7 @@ const StyledPic = styled.div`
   }
 `;
 
-function Project({ project, key, overline }) {
+function Project({ project, overline }) {
   const {
     title,
     description,
@@ -90,7 +91,7 @@ function Project({ project, key, overline }) {
   } = project;
 
   return (
-    <StyledProject key={key}>
+    <StyledProject>
       <div className="project-content">
         <p className="project-overline">{overline}</p>
         <h3 className="project-title">{title}</h3>
