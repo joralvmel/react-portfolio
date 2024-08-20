@@ -39,8 +39,7 @@ const StyledPic = styled.div`
 `;
 
 function About() {
-  const { header, text, skills } = config.about;
-  const { profile } = config.images;
+  const { header, text, skills, profilePic } = config.about;
 
   return (
     <StyledAboutSection id="about">
@@ -48,7 +47,7 @@ function About() {
 
       <div className="inner">
         <AboutText text={text} skills={skills} />
-        <StyledPic>{profile}</StyledPic>
+        <StyledPic>{profilePic}</StyledPic>
       </div>
     </StyledAboutSection>
   );

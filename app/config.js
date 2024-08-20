@@ -1,6 +1,6 @@
 "use client";
 
-import profile from "@/public/profile.jpg";
+import profilePic from "@/public/profile.jpg";
 import watchlist from "@/public/watchlist-api.png";
 import connectFour from "@/public/react-connect-four.png";
 import theWildOasis from "@/public/the-wild-oasis.png";
@@ -20,6 +20,10 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 
 export const config = {
   email: "joralvmel@gmail.com",
+  githubTitle: "GitHub Repository",
+  externalTitle: "Live View",
+
+  buttons: { resume: "Resume", more: "Show More", less: "Show Less" },
 
   icons: {
     logo: <FaReact />,
@@ -27,17 +31,6 @@ export const config = {
     external: <FaExternalLinkAlt />,
     folder: <FaRegFolder />,
   },
-
-  images: {
-    profile: (
-      <Image src={profile} fill quality={90} alt={`Profile picture of me`} />
-    ),
-  },
-
-  buttons: { resume: "Resume", more: "Show More", less: "Show Less" },
-
-  githubTitle: "GitHub Repository",
-  externalTitle: "Live View",
 
   hero: {
     title: "Hi, my name is",
@@ -54,7 +47,6 @@ export const config = {
       "In summary, I bring extensive process improvement, client management, teamwork skills, automation, and full stack development expertise to the table, all supported by a commitment to lifelong learning.",
       "Here are a few technologies I've been working with recently:",
     ],
-
     skills: [
       "JavaScript (ES6+)",
       "React",
@@ -63,6 +55,9 @@ export const config = {
       "Node.js",
       "Java",
     ],
+    profilePic: (
+      <Image src={profilePic} fill quality={90} alt={`Profile picture of me`} />
+    ),
   },
 
   experience: {
