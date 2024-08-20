@@ -7,7 +7,6 @@ const StyledSideElement = styled.div`
   bottom: 0;
   left: 20px;
   right: auto;
-  color: var(--color-grey-400);
 `;
 
 function Side({ children }) {

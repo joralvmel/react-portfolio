@@ -3,9 +3,9 @@
 import styled from "styled-components";
 
 const StyledButton = styled.button`
-  color: var(--color-grey-500);
+  color: var(--color-text);
   background-color: transparent;
-  border: 1px solid var(--color-grey-500);
+  border: 1px solid var(--color-accent);
   border-radius: var(--border-radius);
   font-size: var(--fs-xxs);
 
@@ -13,7 +13,8 @@ const StyledButton = styled.button`
 
   transition: background-color 0.3s ease;
   &:hover {
-    background-color: var(--color-grey-200);
+    background-color: var(--color-accent);
+    color: var(--color-text-light);
   }
 `;
 

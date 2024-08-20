@@ -13,7 +13,7 @@ const StyledFooter = styled.footer`
 `;
 
 const StyledCredit = styled.div`
-  color: var(--color-grey-500);
+  color: var(--color-text);
   font-size: var(--fs-xxs);
   line-height: 1;
 

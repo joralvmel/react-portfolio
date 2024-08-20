@@ -12,9 +12,17 @@ const StyledTechList = styled.ul`
 
   li {
     margin: 0 20px 5px 0;
-    color: var(--color-grey-500);
+    color: var(--color-text);
     font-size: var(--fs-xs);
     white-space: nowrap;
+    border: 1px solid var(--color-accent);
+    border-radius: var(--border-radius);
+    padding: 5px;
+
+    &:hover {
+      color: var(--color-text-light);
+      border: 1px solid var(--color-accent-hover);
+    }
   }
 `;
 

@@ -7,23 +7,23 @@ const StyledExperienceTabPanel = styled.div`
   width: 100%;
   height: auto;
   padding: 10px 5px;
-  color: var(--color-grey-400);
+  color: var(--color-secondary);
 
   h3 {
     margin-bottom: 2px;
     font-size: var(--fs-xxl);
     font-weight: 500;
     line-height: 1.3;
-    color: var(--color-grey-600);
+    color: var(--color-text);
 
     .company {
-      color: var(--color-grey-400);
+      color: var(--color-accent);
     }
   }
 
   .range {
     margin-bottom: 25px;
-    color: var(--color-grey-500);
+    color: var(--color-text-light);
     font-size: var(--fs-xs);
   }
 `;
@@ -35,7 +35,7 @@ function ExperienceTabPanel({ job, key }) {
   return (
     <StyledExperienceTabPanel key={key}>
       <h3>
-        {position} <span className="company">at {company}</span>
+        {position} <span className="company"> - {company}</span>
       </h3>
       <p className="range">
         {startDate} - {endDate}

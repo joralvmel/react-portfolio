@@ -8,10 +8,6 @@ import AboutText from "../AboutText";
 const StyledAboutSection = styled.section`
   max-width: 900px;
 
-  h2 {
-    color: var(--color-grey-500);
-  }
-
   .inner {
     display: grid;
     grid-template-columns: 3fr 2fr;
@@ -31,7 +27,7 @@ const StyledPic = styled.div`
     width: 100%;
     height: 100%;
     border-radius: var(--border-radius);
-    border: 2px solid var(--color-grey-500);
+    border: 2px solid var(--color-accent);
     top: 14px;
     left: 14px;
     z-index: -1;

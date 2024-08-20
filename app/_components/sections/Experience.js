@@ -9,10 +9,6 @@ import ExperienceTabList from "../ExperienceTabList";
 const StyledExperienceSection = styled.section`
   max-width: 900px;
 
-  h2 {
-    color: var(--color-grey-500);
-  }
-
   .inner {
     display: flex;
   }

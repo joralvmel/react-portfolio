@@ -12,7 +12,7 @@ const StyledHeader = styled.header`
   padding: 0px 50px;
   width: 100%;
   height: 60px;
-  background-color: var(--color-grey-0);
+  background-color: var(--color-header);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -26,7 +26,7 @@ const StyledNav = styled.nav`
   list-style: none;
   width: 100%;
   justify-content: space-between;
-  color: var(--color-grey-400);
+  color: var(--color-text);
 `;
 
 const StyledLinks = styled.ul`
@@ -47,13 +47,13 @@ const StyledLinks = styled.ul`
       &:before {
         content: "0" counter(item) ".";
         margin-right: 5px;
-        color: var(--color-grey-500);
+        color: var(--color-accent);
         font-size: var(--fs-xxs);
         text-align: right;
       }
       &:hover,
       &:focus {
-        color: var(--color-grey-500);
+        color: var(--color-text-light);
       }
     }
   }
@@ -66,9 +66,9 @@ function Header() {
       <StyledNav>
         <Logo />
         <StyledLinks>
-          {config.navLinks.map((link, index) => (
+          {config.navLinks.map(({ url, content }, index) => (
             <li key={index}>
-              <Link href={link.url}>{link.content}</Link>
+              <Link href={url}>{content}</Link>
             </li>
           ))}
         </StyledLinks>

@@ -21,11 +21,11 @@ const StyledOtherProject = styled.li`
     height: 100%;
     padding: 2rem 1.75rem;
     border-radius: var(--border-radius);
-    background-color: var(--color-grey-100);
+    background-color: var(--color-tertiary);
     overflow: auto;
 
     &:hover {
-      background-color: var(--color-grey-200);
+      background-color: var(--color-quaternary);
       transition: background-color 0.5s ease;
     }
   }
@@ -37,7 +37,7 @@ const StyledOtherProject = styled.li`
     justify-content: space-between;
 
     .folder {
-      color: var(--color-grey-500);
+      color: var(--color-accent);
       svg {
         width: 30px;
         height: 30px;
@@ -48,13 +48,13 @@ const StyledOtherProject = styled.li`
       display: flex;
       align-items: center;
       margin-right: -10px;
-      color: var(--color-grey-400);
 
       a {
         padding: 5px 7px;
+        transition: background-color 0.3s ease;
 
         &:hover {
-          color: var(--color-grey-500);
+          color: var(--color-accent-hover);
         }
 
         svg {
@@ -67,7 +67,7 @@ const StyledOtherProject = styled.li`
 
   .project-title {
     margin: 0 0 10px;
-    color: var(--color-grey-600);
+    color: var(--color-text-light);
     font-size: var(--fs-xxl);
 
     a {
@@ -76,7 +76,7 @@ const StyledOtherProject = styled.li`
   }
 
   .project-description {
-    color: var(--color-grey-500);
+    color: var(--color-text);
     font-size: 17px;
   }
 

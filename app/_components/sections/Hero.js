@@ -13,24 +13,24 @@ const StyledHeroSection = styled.section`
   height: 100vh;
   padding: 0px;
   h1 {
-    color: var(--color-grey-500);
+    color: var(--color-secondary);
     margin: 0 0 20px 5px;
     font-size: var(--fs-lg);
     font-weight: 400;
   }
 
   h2 {
-    color: var(--color-grey-500);
+    color: var(--color-accent);
     margin: 0 0 40px 4px;
     font-weight: 400;
   }
 
   h3 {
-    color: var(--color-grey-400);
+    color: var(--color-secondary);
   }
 
   p {
-    color: var(--color-grey-400);
+    color: var(--color-secondary);
     margin: 40px 0 0;
     max-width: 640px;
   }

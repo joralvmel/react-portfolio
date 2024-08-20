@@ -7,12 +7,12 @@ import { config } from "@/app/config";
 
 const StyledLogo = styled.div`
   a {
-    color: var(--color-grey-300);
+    color: var(--color-accent);
     width: 40px;
     height: 40px;
     position: relative;
     &:hover {
-      color: var(--color-grey-400);
+      color: var(--color-accent-hover);
     }
   }
 `;

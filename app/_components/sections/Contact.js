@@ -8,35 +8,18 @@ const StyledContactSection = styled.section`
   margin: 0 auto 100px;
   text-align: center;
 
-  h2 {
-    font-size: var(--fs-heading);
-    color: var(--color-grey-500);
-  }
-
-  .overline {
-    display: block;
-    margin-bottom: 20px;
-    color: var(--color-grey-500);
-    font-size: var(--fs-md);
-    font-weight: 400;
-
-    &:before {
-      bottom: 0;
-      font-size: var(--fs-sm);
-    }
-
-    &:after {
-      display: none;
-    }
-  }
-
   .title {
     font-size: var(--fs-heading);
-    color: var(--color-grey-400);
+    color: var(--color-primary);
+  }
+
+  .text {
+    color: var(--color-secondary);
   }
 
   .email-link {
     margin-top: 50px;
+    color: var(--color-accent);
   }
 `;
 
@@ -49,7 +32,7 @@ function Contact() {
 
       <h2 className="title">{title}</h2>
 
-      <p>{text}</p>
+      <p className="text">{text}</p>
 
       <a className="email-link" href={`mailto:${email}`}>
         {email}

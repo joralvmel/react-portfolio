@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 import TechList from "./TechList";
 import ProjectLinks from "./ProjectLinks";
+import { config } from "../config";
 
 const StyledProject = styled.li`
   position: relative;
@@ -41,13 +42,13 @@ const StyledProject = styled.li`
 
   .project-overline {
     margin: 10px 0;
-    color: var(--color-grey-600);
+    color: var(--color-accent);
     font-size: var(--fs-xs);
     font-weight: 400;
   }
 
   .project-title {
-    color: var(--color-grey-600);
+    color: var(--color-text);
     font-size: var(--fs-xxl);
   }
 
@@ -55,8 +56,8 @@ const StyledProject = styled.li`
     position: relative;
     padding: 25px 5px;
     border-radius: var(--border-radius);
-    background-color: var(--color-grey-100);
-    color: var(--color-grey-500);
+    background-color: var(--color-tertiary);
+    color: var(--color-text);
     font-size: var(--fs-lg);
   }
 `;
@@ -77,9 +78,8 @@ const StyledPic = styled.div`
   }
 `;
 
-function Project({ project, key }) {
+function Project({ project, key, overline }) {
   const {
-    overline,
     title,
     description,
     technologies,

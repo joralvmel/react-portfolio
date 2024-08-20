@@ -4,7 +4,7 @@ import styled from "styled-components";
 import TechList from "./TechList";
 
 const StyledText = styled.div`
-  color: var(--color-grey-500);
+  color: var(--color-secondary);
   width: 100%;
 `;
 

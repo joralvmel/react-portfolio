@@ -18,7 +18,7 @@ const StyledSocialList = styled.ul`
     display: block;
     width: 1px;
     height: 60px;
-    background-color: var(--color-grey-500);
+    background-color: var(--color-accent);
   }
 
   li {
@@ -28,9 +28,10 @@ const StyledSocialList = styled.ul`
 
     a {
       padding: 10px;
+      color: var(--color-accent);
 
       &:hover {
-        color: var(--color-grey-500);
+        color: var(--color-accent-hover);
       }
       svg {
         width: 15px;

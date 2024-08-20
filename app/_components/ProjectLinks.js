@@ -10,9 +10,9 @@ const StyledProjectLinks = styled.div`
 
   a {
     padding: 10px;
-    color: var(--color-grey-400);
+    color: var(--color-accent);
     &:hover {
-      color: var(--color-grey-500);
+      color: var(--color-accent-hover);
     }
 
     svg {
