@@ -6,7 +6,6 @@ import styled from "styled-components";
 const StyledProjectLinks = styled.div`
   display: flex;
   position: relative;
-  color: var(--color-grey-300);
 
   a {
     padding: 10px;

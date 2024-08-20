@@ -79,26 +79,6 @@ const StyledOtherProject = styled.li`
     color: var(--color-text);
     font-size: 17px;
   }
-
-  .project-tech-list {
-    display: flex;
-    align-items: flex-end;
-    flex-grow: 1;
-    flex-wrap: wrap;
-    padding: 0;
-    margin: 20px 0 0 0;
-    list-style: none;
-    color: var(--color-grey-400);
-
-    li {
-      font-size: var(--fs-xxs);
-      line-height: 1.75;
-
-      &:not(:last-of-type) {
-        margin-right: 15px;
-      }
-    }
-  }
 `;
 
 function OtherProject({ project, i }) {
