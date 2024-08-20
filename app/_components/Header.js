@@ -6,6 +6,7 @@ import Link from "next/link";
 import Button from "./Button";
 
 import { config } from "@/app/config";
+import DarkModeToggle from "./DarkModeToggle";
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -65,6 +66,7 @@ function Header() {
     <StyledHeader>
       <StyledNav>
         <Logo />
+        <DarkModeToggle />
         <StyledLinks>
           {config.navLinks.map(({ url, content }, index) => (
             <li key={index}>
