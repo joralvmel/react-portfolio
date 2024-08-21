@@ -1,9 +1,8 @@
 "use client";
 
 import styled from "styled-components";
-
-import { config } from "@/app/config";
 import AboutText from "../AboutText";
+import { useLanguage } from "@/app/_context/LanguageContext";
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
@@ -35,6 +34,7 @@ const StyledPic = styled.div`
 `;
 
 function About() {
+  const { config } = useLanguage();
   const { header, text, skills, profilePic } = config.about;
 
   return (

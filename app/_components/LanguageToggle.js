@@ -1,10 +1,11 @@
-import { config } from "@/app/config";
 import ButtonToggle from "./ButtonToggle";
+import { useLanguage } from "../_context/LanguageContext";
 
 function LanguageToggle() {
+  const { config, toggleLanguage } = useLanguage();
   const { language } = config.icons;
 
-  return <ButtonToggle>{language}</ButtonToggle>;
+  return <ButtonToggle onClick={toggleLanguage}>{language}</ButtonToggle>;
 }
 
 export default LanguageToggle;

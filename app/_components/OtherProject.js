@@ -1,9 +1,9 @@
 "use client";
 
-import { config } from "@/app/config";
 import styled from "styled-components";
 import ProjectLinks from "./ProjectLinks";
 import TechList from "./TechList";
+import { useLanguage } from "../_context/LanguageContext";
 
 const StyledOtherProject = styled.li`
   position: relative;
@@ -82,6 +82,7 @@ const StyledOtherProject = styled.li`
 `;
 
 function OtherProject({ project, i }) {
+  const { config } = useLanguage();
   const { title, description, github, external, technologies } = project;
   const { folder } = config.icons;
 

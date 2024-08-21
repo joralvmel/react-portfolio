@@ -1,7 +1,7 @@
 "use client";
 
-import { config } from "@/app/config";
 import styled from "styled-components";
+import { useLanguage } from "../_context/LanguageContext";
 
 const StyledProjectLinks = styled.div`
   display: flex;
@@ -22,6 +22,7 @@ const StyledProjectLinks = styled.div`
 `;
 
 function ProjectLinks({ github, external }) {
+  const { config } = useLanguage();
   const { github: githubIcon, external: externalIcon } = config.icons;
   const { githubTitle, externalTitle } = config;
   return (

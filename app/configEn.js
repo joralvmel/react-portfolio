@@ -20,12 +20,12 @@ import {
 
 import { FaExternalLinkAlt, FaLanguage } from "react-icons/fa";
 
-export const config = {
+export const configEn = {
   email: "joralvmel@gmail.com",
   githubTitle: "GitHub Repository",
   externalTitle: "Live View",
 
-  buttons: { resume: "Resume", more: "Show More", less: "Show Less" },
+  buttons: { resume: "CV", more: "Show More", less: "Show Less" },
 
   icons: {
     logo: <FaReact />,
@@ -39,7 +39,7 @@ export const config = {
 
   hero: {
     title: "Hi, my name is",
-    name: "Jorge Alvarez",
+    name: "Jorge Álvarez",
     header: "I build web applications.",
     text: " As a Software Engineer, I see coding as both an art and a science. My passion lies in crafting beautiful, intuitive interfaces using React, where creativity meets functionality. Every project is an opportunity to push boundaries, innovate, and bring ideas to life in a way that resonates with users.",
   },

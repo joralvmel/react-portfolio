@@ -1,8 +1,7 @@
 "use client";
 
 import styled from "styled-components";
-
-import { config } from "@/app/config";
+import { useLanguage } from "@/app/_context/LanguageContext";
 
 const StyledHeroSection = styled.section`
   display: flex;
@@ -38,6 +37,7 @@ const StyledHeroSection = styled.section`
 `;
 
 function Hero() {
+  const { config } = useLanguage();
   const { title, name, header, text } = config.hero;
   return (
     <StyledHeroSection>

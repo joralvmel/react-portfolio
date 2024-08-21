@@ -1,11 +1,10 @@
 "use client";
 
 import styled from "styled-components";
-
-import { config } from "@/app/config";
 import ExperienceTabPanels from "../ExperienceTabPanels";
 import ExperienceTabList from "../ExperienceTabList";
 import { useState } from "react";
+import { useLanguage } from "@/app/_context/LanguageContext";
 
 const StyledExperienceSection = styled.section`
   max-width: 900px;
@@ -16,6 +15,7 @@ const StyledExperienceSection = styled.section`
 `;
 
 function Experience() {
+  const { config } = useLanguage();
   const { header, jobs } = config.experience;
   const [selectedTab, setSelectedTab] = useState(0);
 

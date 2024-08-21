@@ -1,8 +1,7 @@
 "use client";
 
-import { config } from "@/app/config";
-
 import styled from "styled-components";
+import { useLanguage } from "../_context/LanguageContext";
 
 const StyledFooter = styled.footer`
   flex-direction: column;
@@ -39,6 +38,7 @@ const StyledCredit = styled.div`
 `;
 
 function Footer() {
+  const { config } = useLanguage();
   const { text, url } = config.footer;
   return (
     <StyledFooter>

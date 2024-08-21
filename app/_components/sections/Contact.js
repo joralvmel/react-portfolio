@@ -1,6 +1,6 @@
 "use client";
 
-import { config } from "@/app/config";
+import { useLanguage } from "@/app/_context/LanguageContext";
 import styled from "styled-components";
 
 const StyledContactSection = styled.section`
@@ -24,6 +24,7 @@ const StyledContactSection = styled.section`
 `;
 
 function Contact() {
+  const { config } = useLanguage();
   const { header, title, email, text } = config.contact;
 
   return (

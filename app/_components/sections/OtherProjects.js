@@ -1,9 +1,9 @@
 "use client";
 
-import { config } from "@/app/config";
 import styled from "styled-components";
 import Button from "../Button";
 import OtherProject from "../OtherProject";
+import { useLanguage } from "@/app/_context/LanguageContext";
 
 const StyledOtherProjectsSection = styled.section`
   display: flex;
@@ -38,6 +38,7 @@ const StyledOtherProjectsSection = styled.section`
 `;
 
 function OtherProjects() {
+  const { config } = useLanguage();
   const { header, content } = config.otherProjects;
   const { more, less } = config.buttons;
   return (

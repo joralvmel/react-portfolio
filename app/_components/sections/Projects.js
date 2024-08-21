@@ -1,15 +1,15 @@
 "use client";
 
 import styled from "styled-components";
-
-import { config } from "@/app/config";
 import Project from "../Project";
+import { useLanguage } from "@/app/_context/LanguageContext";
 
 const StyledProjectsSection = styled.section`
   max-width: 900px;
 `;
 
 function Projects() {
+  const { config } = useLanguage();
   const { header, content, overline } = config.projects;
 
   return (

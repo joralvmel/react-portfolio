@@ -2,8 +2,7 @@
 
 import Link from "next/link";
 import styled from "styled-components";
-
-import { config } from "@/app/config";
+import { useLanguage } from "../_context/LanguageContext";
 
 const StyledLogo = styled.div`
   a {
@@ -18,6 +17,7 @@ const StyledLogo = styled.div`
 `;
 
 function Logo() {
+  const { config } = useLanguage();
   const { logo } = config.icons;
   return (
     <StyledLogo className="logo">

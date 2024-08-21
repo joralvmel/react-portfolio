@@ -1,7 +1,6 @@
 "use client";
 
 import styled from "styled-components";
-
 import TechList from "./TechList";
 import ProjectLinks from "./ProjectLinks";
 

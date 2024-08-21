@@ -4,10 +4,9 @@ import styled from "styled-components";
 import Logo from "./Logo";
 import Link from "next/link";
 import Button from "./Button";
-
-import { config } from "@/app/config";
 import DarkModeToggle from "./DarkModeToggle";
 import LanguageToggle from "./LanguageToggle";
+import { useLanguage } from "../_context/LanguageContext";
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -69,6 +68,7 @@ const StyledLinks = styled.ul`
 `;
 
 function Header() {
+  const { config } = useLanguage();
   const { resume } = config.buttons;
   return (
     <StyledHeader>
