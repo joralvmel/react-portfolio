@@ -7,6 +7,7 @@ import Button from "./Button";
 
 import { config } from "@/app/config";
 import DarkModeToggle from "./DarkModeToggle";
+import LanguageToggle from "./LanguageToggle";
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -28,6 +29,13 @@ const StyledNav = styled.nav`
   width: 100%;
   justify-content: space-between;
   color: var(--color-text);
+`;
+
+const StyledButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid var(--color-accent);
 `;
 
 const StyledLinks = styled.ul`
@@ -66,7 +74,11 @@ function Header() {
     <StyledHeader>
       <StyledNav>
         <Logo />
-        <DarkModeToggle />
+        <StyledButtonContainer>
+          <DarkModeToggle />
+          <LanguageToggle />
+        </StyledButtonContainer>
+
         <StyledLinks>
           {config.navLinks.map(({ url, content }, index) => (
             <li key={index}>

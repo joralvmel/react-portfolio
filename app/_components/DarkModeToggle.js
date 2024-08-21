@@ -1,14 +1,15 @@
-import { FaMoon, FaSun } from "react-icons/fa6";
 import { useDarkMode } from "../_context/DarkModeContext";
-import Button from "./Button";
+import { config } from "@/app/config";
+import ButtonToggle from "./ButtonToggle";
 
 function DarkModeToggle() {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
+  const { sun, moon } = config.icons;
 
   return (
-    <Button onClick={toggleDarkMode}>
-      {isDarkMode ? <FaMoon /> : <FaSun />}
-    </Button>
+    <ButtonToggle onClick={toggleDarkMode} isDarkMode={isDarkMode}>
+      {isDarkMode ? moon : sun}
+    </ButtonToggle>
   );
 }
 

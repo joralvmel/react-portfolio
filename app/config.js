@@ -14,9 +14,11 @@ import {
   FaXTwitter,
   FaLinkedinIn,
   FaRegFolder,
+  FaMoon,
+  FaSun,
 } from "react-icons/fa6";
 
-import { FaExternalLinkAlt } from "react-icons/fa";
+import { FaExternalLinkAlt, FaLanguage } from "react-icons/fa";
 
 export const config = {
   email: "joralvmel@gmail.com",
@@ -30,6 +32,9 @@ export const config = {
     github: <FaGithub />,
     external: <FaExternalLinkAlt />,
     folder: <FaRegFolder />,
+    moon: <FaMoon />,
+    sun: <FaSun />,
+    language: <FaLanguage />,
   },
 
   hero: {
