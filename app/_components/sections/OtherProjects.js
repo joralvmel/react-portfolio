@@ -3,6 +3,7 @@
 import styled from "styled-components";
 import Button from "../Button";
 import OtherProject from "../OtherProject";
+import { useState } from "react";
 import { useLanguage } from "@/app/_context/LanguageContext";
 
 const StyledOtherProjectsSection = styled.section`
@@ -41,15 +42,22 @@ function OtherProjects() {
   const { config } = useLanguage();
   const { header, content } = config.otherProjects;
   const { more, less } = config.buttons;
+
+  const [showAll, setShowAll] = useState(false);
+
+  const displayedProjects = showAll ? content : content.slice(0, 6);
+
   return (
     <StyledOtherProjectsSection id="otherProjects">
       <h2>{header}</h2>
       <ul className="projects-grid">
-        {content.map((project, i) => (
+        {displayedProjects.map((project, i) => (
           <OtherProject key={i} project={project} />
         ))}
       </ul>
-      <Button>{more}</Button>
+      <Button onClick={() => setShowAll(!showAll)}>
+        {showAll ? less : more}
+      </Button>
     </StyledOtherProjectsSection>
   );
 }
