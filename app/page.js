@@ -12,6 +12,10 @@ import Contact from "@/app/_components/sections/Contact";
 const StyledMainContainer = styled.main`
   counter-reset: section;
   padding: 0px 150px;
+
+  @media (max-width: 768px) {
+    padding: 6rem 1rem;
+  }
 `;
 
 export default function Home() {
@@ -22,8 +26,8 @@ export default function Home() {
         <About />
         <Experience />
         <Projects />
-        <OtherProjects />
-        <Contact />
+        {/* <OtherProjects />
+        <Contact /> */}
       </StyledMainContainer>
     </Layout>
   );

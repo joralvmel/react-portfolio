@@ -5,6 +5,13 @@ import styled from "styled-components";
 const StyledExperienceTabList = styled.div`
   position: relative;
   width: max-content;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow-x: auto;
+  }
 `;
 
 const StyledTabButton = styled.button`
@@ -29,6 +36,15 @@ const StyledTabButton = styled.button`
   &:focus,
   &.selected {
     border-right: 2px solid var(--color-accent);
+  }
+
+  @media (max-width: 768px) {
+    border: none;
+    &:focus,
+    &.selected {
+      border: none;
+      border-bottom: 2px solid var(--color-accent);
+    }
   }
 `;
 

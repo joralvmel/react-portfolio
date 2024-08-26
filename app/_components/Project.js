@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import TechList from "./TechList";
 import ProjectLinks from "./ProjectLinks";
+import { useState, useEffect } from "react";
 
 const StyledProject = styled.li`
   display: flex;
@@ -16,17 +17,6 @@ const StyledProject = styled.li`
   .project-details {
     width: 50%;
     padding: 20px;
-  }
-`;
-
-const StyledPic = styled.div`
-  width: 50%;
-  position: relative;
-  overflow: hidden;
-
-  a {
-    width: 100%;
-    height: 100%;
   }
 
   .project-description {
@@ -47,46 +37,93 @@ const StyledPic = styled.div`
 
     &:hover {
       transition: var(--transition-image);
-      background-color: transparent;
-      color: transparent;
+      background-color: var(--color-image-overlay);
+      color: var(--color-text-light);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .project-description {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0;
+      background-color: var(--color-image-overlay);
+      color: var(--color-text-light);
+      font-size: var(--fs-lg);
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      text-align: center;
+
+      &:hover {
+        transition: var(--transition-image);
+        background-color: transparent;
+        color: transparent;
+      }
     }
   }
 `;
 
+const StyledPic = styled.div`
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0;
+  }
+`;
+
 function Project({ project, index }) {
-  const {
-    title,
-    description,
-    technologies,
-    image,
-    github,
-    external,
-    externalTitle,
-  } = project;
+  const { title, description, technologies, image, github, external } = project;
 
   const isEven = index % 2 === 0;
 
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <StyledProject $isEven={isEven}>
-      <div className="project-details">
-        <h3 className="project-title">{title}</h3>
-        <TechList technologies={technologies} />
-        <ProjectLinks github={github} external={external} />
-      </div>
-      <StyledPic>
-        {external && (
-          <a
-            href={external}
-            target="_"
-            rel="noopener noreferrer"
-            title={externalTitle}
-          >
+    <div>
+      {isMobile ? (
+        <StyledProject $isEven={isEven}>
+          <StyledPic>
+            {image}
+            <div className="project-details">
+              <h3 className="project-title">{title}</h3>
+              <div className="project-description">{description}</div>
+              <TechList technologies={technologies} />
+              <ProjectLinks github={github} external={external} />
+            </div>
+          </StyledPic>
+        </StyledProject>
+      ) : (
+        <StyledProject $isEven={isEven}>
+          <div className="project-details">
+            <h3 className="project-title">{title}</h3>
+            <TechList technologies={technologies} />
+            <ProjectLinks github={github} external={external} />
+          </div>
+          <StyledPic>
             {image}
             <div className="project-description">{description}</div>
-          </a>
-        )}
-      </StyledPic>
-    </StyledProject>
+          </StyledPic>
+        </StyledProject>
+      )}
+    </div>
   );
 }
 

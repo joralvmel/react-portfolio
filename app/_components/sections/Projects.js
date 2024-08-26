@@ -6,6 +6,12 @@ import { useLanguage } from "@/app/_context/LanguageContext";
 
 const StyledProjectsSection = styled.section`
   max-width: 900px;
+
+  .project {
+    @media (max-width: 768px) {
+      padding: 0;
+    }
+  }
 `;
 
 function Projects() {
@@ -15,7 +21,7 @@ function Projects() {
   return (
     <StyledProjectsSection id="projects">
       <h2 className="numbered-heading">{header}</h2>
-      <ul>
+      <ul className="project">
         {content.map((project, i) => (
           <Project key={i} project={project} index={i} />
         ))}

@@ -38,6 +38,10 @@ const StyledSocialList = styled.ul`
       }
     }
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 function Social() {

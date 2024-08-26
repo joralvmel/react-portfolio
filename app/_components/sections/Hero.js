@@ -8,7 +8,6 @@ const StyledHeroSection = styled.section`
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
-  min-height: 100vh;
   height: 100vh;
   padding: 0px;
   h1 {
@@ -33,6 +32,10 @@ const StyledHeroSection = styled.section`
     font-size: var(--fs-lg);
     margin: 40px 0 0;
     max-width: 640px;
+  }
+
+  @media (max-width: 768px) {
+    height: calc(100vh - 10rem);
   }
 `;
 

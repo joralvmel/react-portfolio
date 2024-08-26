@@ -7,17 +7,28 @@ import { useLanguage } from "@/app/_context/LanguageContext";
 const StyledAboutSection = styled.section`
   max-width: 900px;
 
+  @media (max-width: 768px) {
+    .numbered-heading {
+      margin: 0 0 1rem 0;
+    }
+  }
+
   .inner {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    grid-gap: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 `;
 
 const StyledPic = styled.div`
   position: relative;
   max-width: 300px;
-  aspect-ratio: 1 / 1;
+  height: 300px;
+  width: 100%;
 
   &:after {
     content: "";
@@ -30,6 +41,10 @@ const StyledPic = styled.div`
     top: 14px;
     left: 14px;
     z-index: -1;
+  }
+
+  @media (max-width: 768px) {
+    margin-left: 1rem;
   }
 `;
 
