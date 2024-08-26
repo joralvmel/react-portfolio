@@ -52,6 +52,7 @@ const variables = css`
     --transition-background: background-color 0.3s ease;
     --transition-color: color 0.3s ease;
     --transition-image: all 0.6s ease;
+    --transition-transform: opacity 0.3s ease, transform 0.3s ease;
   }
 `;
 

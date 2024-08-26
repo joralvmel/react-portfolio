@@ -16,6 +16,7 @@ import {
   FaRegFolder,
   FaMoon,
   FaSun,
+  FaBars,
 } from "react-icons/fa6";
 
 import { FaExternalLinkAlt, FaLanguage } from "react-icons/fa";
@@ -35,6 +36,7 @@ export const configEs = {
     moon: <FaMoon />,
     sun: <FaSun />,
     language: <FaLanguage />,
+    menu: <FaBars />,
   },
 
   hero: {
