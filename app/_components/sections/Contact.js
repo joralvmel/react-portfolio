@@ -20,6 +20,10 @@ const StyledContactSection = styled.section`
   .email-link {
     margin-top: 50px;
     color: var(--color-accent);
+
+    &:hover {
+      color: var(--color-accent-hover);
+    }
   }
 `;
 

@@ -9,7 +9,7 @@ const StyledButtonToggle = styled.button`
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+  transition: var(--transition-background), var(--transition-color);
 
   &:hover {
     color: var(--color-accent-hover);

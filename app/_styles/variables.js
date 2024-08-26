@@ -13,8 +13,9 @@ const variables = css`
       --color-secondary: #545454;
       --color-tertiary: #bfbfbf;
       --color-quaternary: #b5b5b5;
-      --color-accent: #ff3333;
-      --color-accent-hover: #cb0000;
+      --color-accent: #0961b9;
+      --color-accent-hover: #084787;
+      --color-image-overlay: rgba(230, 230, 230, 0.8);
     }
 
     &.dark-mode {
@@ -26,8 +27,9 @@ const variables = css`
       --color-secondary: #ababab;
       --color-tertiary: #404040;
       --color-quaternary: #494949;
-      --color-accent: #cb0000;
-      --color-accent-hover: #ff3333;
+      --color-accent: #479ff6;
+      --color-accent-hover: #77b7f7;
+      --color-image-overlay: rgba(25, 25, 25, 0.8);
     }
 
     //Fonts
@@ -46,6 +48,10 @@ const variables = css`
 
     --tab-height: 42px;
     --tab-width: 120px;
+
+    --transition-background: background-color 0.3s ease;
+    --transition-color: color 0.3s ease;
+    --transition-image: all 0.6s ease;
   }
 `;
 

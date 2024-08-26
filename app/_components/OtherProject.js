@@ -26,7 +26,7 @@ const StyledOtherProject = styled.li`
 
     &:hover {
       background-color: var(--color-quaternary);
-      transition: background-color 0.5s ease;
+      transition: var(--transition-background);
     }
   }
 

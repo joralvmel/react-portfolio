@@ -11,7 +11,7 @@ const StyledButton = styled.button`
 
   padding: 0.5rem 1rem;
 
-  transition: background-color 0.3s ease;
+  transition: var(--transition-background);
   &:hover {
     background-color: var(--color-accent);
     color: var(--color-text-light);

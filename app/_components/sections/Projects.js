@@ -10,14 +10,14 @@ const StyledProjectsSection = styled.section`
 
 function Projects() {
   const { config } = useLanguage();
-  const { header, content, overline } = config.projects;
+  const { header, content } = config.projects;
 
   return (
     <StyledProjectsSection id="projects">
       <h2 className="numbered-heading">{header}</h2>
       <ul>
         {content.map((project, i) => (
-          <Project key={i} project={project} overline={overline} />
+          <Project key={i} project={project} index={i} />
         ))}
       </ul>
     </StyledProjectsSection>

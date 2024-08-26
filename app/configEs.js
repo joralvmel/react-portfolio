@@ -168,7 +168,6 @@ export const configEs = {
 
   projects: {
     header: "Proyectos",
-    overline: "Proyectos Destacados",
 
     content: [
       {

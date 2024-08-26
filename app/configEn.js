@@ -168,7 +168,6 @@ export const configEn = {
 
   projects: {
     header: "Projects",
-    overline: "Featured Projects",
 
     content: [
       {
