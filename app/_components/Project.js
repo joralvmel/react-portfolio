@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import TechList from "./TechList";
 import ProjectLinks from "./ProjectLinks";
-import { useEffect, useState } from "react";
 import Image from "next/image";
+import { useMobile } from "@/app/_context/MobileContext";
 
 const StyledProject = styled.li`
   display: flex;
@@ -92,22 +92,10 @@ const StyledPic = styled.div`
 `;
 
 function Project({ project, index }) {
-  const [isMobile, setIsMobile] = useState(false);
+  const { isMobile } = useMobile();
   const { title, description, technologies, image, github, external } = project;
 
   const isEven = index % 2 === 0;
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return isMobile ? (
     <StyledMobileProject>

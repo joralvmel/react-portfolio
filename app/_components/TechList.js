@@ -10,7 +10,7 @@ const StyledTechList = styled.ul`
   list-style: none;
 
   li {
-    margin: 0 5px;
+    margin: 5px;
     color: var(--color-text);
     font-size: var(--fs-xs);
     white-space: nowrap;

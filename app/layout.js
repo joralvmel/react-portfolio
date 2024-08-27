@@ -2,6 +2,7 @@
 import StyledComponentsRegistry from "./_lib/registry";
 import { DarkModeProvider } from "./_context/DarkModeContext";
 import { LanguageProvider } from "./_context/LanguageContext";
+import { MobileProvider } from "./_context/MobileContext";
 
 export default function RootLayout({ children }) {
   return (
@@ -12,11 +13,13 @@ export default function RootLayout({ children }) {
         <title>React Portfolio</title>
       </head>
       <body>
-        <LanguageProvider>
-          <DarkModeProvider>
-            <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
-          </DarkModeProvider>
-        </LanguageProvider>
+        <MobileProvider>
+          <LanguageProvider>
+            <DarkModeProvider>
+              <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+            </DarkModeProvider>
+          </LanguageProvider>
+        </MobileProvider>
       </body>
     </html>
   );
