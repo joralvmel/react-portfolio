@@ -22,6 +22,10 @@ const StyledTechList = styled.ul`
       color: var(--color-text-light);
       border: 1px solid var(--color-accent-hover);
     }
+
+    @media (max-width: 768px) {
+      font-size: var(--fs-xxs);
+    }
   }
 `;
 

@@ -74,7 +74,7 @@ const StyledMobileProject = styled.li`
     padding: 15px 3px;
     background-color: var(--color-image-overlay);
     color: var(--color-text-light);
-    font-size: var(--fs-lg);
+    font-size: var(--fs-md);
     z-index: 1;
     display: flex;
     flex-direction: column;
