@@ -144,9 +144,19 @@ function Header() {
   const { config } = useLanguage();
   const { resume } = config.buttons;
   const { menu } = config.icons;
+  const { cv } = config;
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = `/${cv}`;
+    link.download = cv;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -168,7 +178,7 @@ function Header() {
         </StyledLinks>
       </StyledNav>
       <StyledMobileButton>
-        <Button>{resume}</Button>
+        <Button onClick={handleDownload}>{resume}</Button>
       </StyledMobileButton>
 
       <StyledHamburgerMenu onClick={toggleMenu}>{menu}</StyledHamburgerMenu>
@@ -179,7 +189,7 @@ function Header() {
           </li>
         ))}
         <li>
-          <Button>{resume}</Button>
+          <Button onClick={handleDownload}>{resume}</Button>
         </li>
       </StyledMobileLinks>
     </StyledHeader>

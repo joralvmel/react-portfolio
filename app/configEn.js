@@ -24,6 +24,7 @@ export const configEn = {
   email: "joralvmel@gmail.com",
   githubTitle: "GitHub Repository",
   externalTitle: "Live View",
+  cv: "JorgeAlvarezCV.pdf",
 
   buttons: { resume: "CV", more: "Show More", less: "Show Less" },
 
