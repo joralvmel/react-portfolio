@@ -2,6 +2,7 @@
 
 import styled from "styled-components";
 import { useLanguage } from "../_context/LanguageContext";
+import Social from "./Social";
 
 const StyledFooter = styled.footer`
   flex-direction: column;
@@ -37,11 +38,33 @@ const StyledCredit = styled.div`
   }
 `;
 
+const FooterSocialList = styled.div`
+  ul {
+    flex-direction: row;
+    justify-content: center;
+    &:after {
+      content: none;
+    }
+    li {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+
 function Footer() {
   const { config } = useLanguage();
   const { text, url } = config.footer;
   return (
     <StyledFooter>
+      <FooterSocialList>
+        <Social />
+      </FooterSocialList>
       <StyledCredit>
         <a href={url} target="_blank" rel="noopener noreferrer">
           <div>{text}</div>

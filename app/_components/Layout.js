@@ -2,9 +2,9 @@
 
 import styled from "styled-components";
 import GlobalStyles from "@/app/_styles/GlobalStyles";
-import Social from "./Social";
 import Footer from "./Footer";
 import Header from "./Header";
+import Side from "./Side";
 
 const StyledContent = styled.div`
   display: flex;
@@ -18,7 +18,7 @@ function Layout({ children }) {
       <GlobalStyles />
       <StyledContent>
         <Header />
-        <Social />
+        <Side />
         <div id="content">
           {children}
           <Footer />

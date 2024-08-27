@@ -1,7 +1,6 @@
 "use client";
 
 import styled from "styled-components";
-import Side from "./Side";
 import { useLanguage } from "../_context/LanguageContext";
 
 const StyledSocialList = styled.ul`
@@ -38,33 +37,27 @@ const StyledSocialList = styled.ul`
       }
     }
   }
-
-  @media (max-width: 768px) {
-    display: none;
-  }
 `;
 
 function Social() {
   const { config } = useLanguage();
   const { socialMedia } = config;
   return (
-    <Side>
-      <StyledSocialList>
-        {socialMedia.map(({ url, name, content, icon }, i) => (
-          <li key={i}>
-            <a
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={name}
-              title={content}
-            >
-              {icon}
-            </a>
-          </li>
-        ))}
-      </StyledSocialList>
-    </Side>
+    <StyledSocialList>
+      {socialMedia.map(({ url, name, content, icon }, i) => (
+        <li key={i}>
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={name}
+            title={content}
+          >
+            {icon}
+          </a>
+        </li>
+      ))}
+    </StyledSocialList>
   );
 }
 

@@ -14,7 +14,7 @@ const StyledMainContainer = styled.main`
   padding: 0px 150px;
 
   @media (max-width: 768px) {
-    padding: 6rem 1rem;
+    padding: 6rem 1rem 0 1rem;
   }
 `;
 
