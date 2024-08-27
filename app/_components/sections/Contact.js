@@ -25,10 +25,6 @@ const StyledContactSection = styled.section`
       color: var(--color-accent-hover);
     }
   }
-
-  @media (max-width: 768px) {
-    margin: 0;
-  }
 `;
 
 function Contact() {
