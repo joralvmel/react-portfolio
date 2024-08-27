@@ -10,9 +10,11 @@ const StyledOtherProjectsSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 0;
 
   h2 {
     font-size: var(--fs-heading);
+    margin: 0;
   }
 
   .archive-link {

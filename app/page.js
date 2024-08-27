@@ -26,8 +26,8 @@ export default function Home() {
         <About />
         <Experience />
         <Projects />
-        {/* <OtherProjects />
-        <Contact /> */}
+        <OtherProjects />
+        <Contact />
       </StyledMainContainer>
     </Layout>
   );

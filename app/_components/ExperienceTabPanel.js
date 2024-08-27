@@ -23,6 +23,10 @@ const StyledExperienceTabPanel = styled.div`
 
   .description {
     font-size: var(--fs-md);
+
+    @media (max-width: 768px) {
+      padding: 0 15px;
+    }
   }
 
   .range {
