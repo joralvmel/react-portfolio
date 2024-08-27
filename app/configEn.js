@@ -5,7 +5,6 @@ import watchlist from "@/public/watchlist-api.png";
 import connectFour from "@/public/react-connect-four.png";
 import theWildOasis from "@/public/the-wild-oasis.png";
 import theWildOasisWebsite from "@/public/the-wild-oasis-website.png";
-import Image from "next/image";
 
 import {
   FaReact,
@@ -62,15 +61,12 @@ export const configEn = {
       "Node.js",
       "Java",
     ],
-    profilePic: (
-      <Image
-        src={profilePic}
-        fill
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        quality={90}
-        alt={`Profile picture of me`}
-      />
-    ),
+    profilePic: {
+      src: profilePic,
+      sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
+      quality: 80,
+      alt: `Profile picture of me`,
+    },
   },
 
   experience: {
@@ -174,6 +170,12 @@ export const configEn = {
     content: [
       {
         title: "The Wild Oasis",
+        image: {
+          src: theWildOasis,
+          sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
+          quality: 80,
+          alt: `The Wild Oasis Dashboard`,
+        },
         description:
           "An application designed for managing check-ins and check-outs in a boutique hotel, including a dashboard for administrators and other configuration options for the hotel staff.",
         technologies: [
@@ -186,18 +188,15 @@ export const configEn = {
         ],
         github: "https://github.com/joralvmel/react-the-wild-oasis",
         external: "https://react-the-wild-oasis-nine.vercel.app/",
-        image: (
-          <Image
-            src={theWildOasis}
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            quality={80}
-            alt={`The Wild Oasis Dashboard`}
-          />
-        ),
       },
       {
         title: "The Wild Oasis Website",
+        image: {
+          src: theWildOasisWebsite,
+          sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
+          quality: 80,
+          alt: `The Wild Oasis main screen`,
+        },
         description:
           "A website designed for a boutique hotel, including a booking system, login functionality with reservation and user management.",
         technologies: [
@@ -210,49 +209,34 @@ export const configEn = {
         ],
         github: "https://github.com/joralvmel/the-wild-oasis-website",
         external: "https://the-wild-oasis-website-eta-eight.vercel.app/",
-        image: (
-          <Image
-            src={theWildOasisWebsite}
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            quality={80}
-            alt={`The Wild Oasis main screen`}
-          />
-        ),
       },
       {
         title: "React Connect Four",
+        image: {
+          src: connectFour,
+          sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
+          quality: 80,
+          alt: `Connect Four Game`,
+        },
         description:
           "A simple Connect Four game built with React, where two players can play against each other.",
         technologies: ["React", "CSS", "Node.js"],
         github: "https://github.com/joralvmel/react-connect-four",
         external: "https://react-conncect-four-joralvmel.netlify.app/",
-        image: (
-          <Image
-            src={connectFour}
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            quality={80}
-            alt={`Connect Four Game`}
-          />
-        ),
       },
       {
         title: "Watchlist API",
+        image: {
+          src: watchlist,
+          sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
+          quality: 80,
+          alt: `Watchlist API Dashboard`,
+        },
         description:
           "An application for keeping track of your favorite Movies and TV Shows with the functionality of creating Watchlists, and providing Movie or TV Show information.",
         technologies: ["EJS", "CSS", "Node.js", "jQuery", "API"],
         github: "https://github.com/joralvmel/watchlist-api",
         external: "https://joralvmel-watchlist-api.onrender.com/",
-        image: (
-          <Image
-            src={watchlist}
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            quality={80}
-            alt={`Watchlist API Dashboard`}
-          />
-        ),
       },
     ],
   },

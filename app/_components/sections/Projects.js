@@ -7,6 +7,10 @@ import { useLanguage } from "@/app/_context/LanguageContext";
 const StyledProjectsSection = styled.section`
   max-width: 900px;
 
+  @media (max-width: 768px) {
+    max-width: 400px;
+  }
+
   .project {
     @media (max-width: 768px) {
       padding: 0;

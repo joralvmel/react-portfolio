@@ -3,6 +3,7 @@
 import styled from "styled-components";
 import AboutText from "../AboutText";
 import { useLanguage } from "@/app/_context/LanguageContext";
+import Image from "next/image";
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
@@ -58,7 +59,16 @@ function About() {
 
       <div className="inner">
         <AboutText text={text} skills={skills} />
-        <StyledPic>{profilePic}</StyledPic>
+        <StyledPic>
+          <Image
+            src={profilePic.src}
+            alt={profilePic.alt}
+            sizes={profilePic.sizes}
+            quality={profilePic.quality}
+            fill
+            priority
+          />
+        </StyledPic>
       </div>
     </StyledAboutSection>
   );

@@ -6,12 +6,11 @@ const StyledTechList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  margin: 25px 0 10px;
   padding: 0;
   list-style: none;
 
   li {
-    margin: 0 20px 5px 0;
+    margin: 0 5px;
     color: var(--color-text);
     font-size: var(--fs-xs);
     white-space: nowrap;
