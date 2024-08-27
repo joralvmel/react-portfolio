@@ -98,7 +98,7 @@ const StyledMobileLinks = styled.ul`
   position: absolute;
   top: 3rem;
   right: 0.5rem;
-  padding: 0.5rem;
+  padding: 1rem 0.5rem;
   border-radius: 0.5rem;
   background: var(--color-tertiary);
   transition: var(--transition-transform);
@@ -106,9 +106,11 @@ const StyledMobileLinks = styled.ul`
   li {
     counter-increment: item 1;
     font-size: var(--fs-lg);
+    width: 100%;
 
     a {
       padding: 0.5rem;
+      width: 100%;
 
       &:before {
         content: "0" counter(item) ".";
@@ -185,11 +187,15 @@ function Header() {
       <StyledMobileLinks $isOpen={isOpen}>
         {config.navLinks.map(({ url, content }, index) => (
           <li key={index}>
-            <Link href={url}>{content}</Link>
+            <Link href={url} onClick={toggleMenu}>
+              {content}
+            </Link>
           </li>
         ))}
         <li>
-          <Button onClick={handleDownload}>{resume}</Button>
+          <Button onClick={handleDownload} width="100%">
+            {resume}
+          </Button>
         </li>
       </StyledMobileLinks>
     </StyledHeader>

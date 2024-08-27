@@ -8,6 +8,7 @@ const StyledButton = styled.button`
   border: 1px solid var(--color-accent);
   border-radius: var(--border-radius);
   font-size: var(--fs-xxs);
+  width: ${(props) => props.width || "auto"};
 
   padding: 0.5rem 1rem;
 
@@ -18,8 +19,12 @@ const StyledButton = styled.button`
   }
 `;
 
-function Button({ children, onClick }) {
-  return <StyledButton onClick={onClick}>{children}</StyledButton>;
+function Button({ children, onClick, width }) {
+  return (
+    <StyledButton onClick={onClick} width={width}>
+      {children}
+    </StyledButton>
+  );
 }
 
 export default Button;
