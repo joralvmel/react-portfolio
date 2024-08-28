@@ -32,14 +32,17 @@ const StyledNav = styled.nav`
   align-items: center;
   list-style: none;
   width: 100%;
-  justify-content: space-between;
+  justify-content: flex-end;
   color: var(--color-text);
 `;
 
 const StyledButtonContainer = styled.div`
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-  gap: 1rem;
+  width: 100%;
+  gap: 0.5rem;
+  padding-left: 1rem;
 `;
 
 const StyledLinks = styled.ul`
@@ -164,12 +167,12 @@ function Header() {
   return (
     <StyledHeader>
       <Logo />
-      <StyledNav>
-        <StyledButtonContainer>
-          <DarkModeToggle />
-          <LanguageToggle />
-        </StyledButtonContainer>
-      </StyledNav>
+
+      <StyledButtonContainer>
+        <DarkModeToggle />
+        <LanguageToggle />
+      </StyledButtonContainer>
+
       <StyledNav>
         <StyledLinks>
           {config.navLinks.map(({ url, content }, index) => (

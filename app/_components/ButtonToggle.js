@@ -6,7 +6,7 @@ const StyledButtonToggle = styled.button`
   background-color: transparent;
   color: var(--color-accent);
   border: none;
-  padding: 10px 20px;
+  padding: 10px;
   border-radius: 5px;
   cursor: pointer;
   transition: var(--transition-background), var(--transition-color);
