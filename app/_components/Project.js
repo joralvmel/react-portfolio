@@ -7,7 +7,8 @@ import { useMobile } from "@/app/_context/MobileContext";
 const StyledProject = styled.li`
   display: flex;
   list-style: none;
-  padding: 20px 0;
+  align-items: center;
+  padding: 10px 0;
   flex-direction: ${({ $isEven }) => ($isEven ? "row" : "row-reverse")};
 
   .project-title {
@@ -17,7 +18,7 @@ const StyledProject = styled.li`
 
   .project-details {
     width: 50%;
-    padding: 20px;
+    padding: 2rem;
   }
 
   .project-description {
@@ -85,8 +86,8 @@ const StyledMobileProject = styled.li`
 `;
 
 const StyledPic = styled.div`
-  width: ${({ $isMobile }) => ($isMobile ? "100%" : "50%")};
-  height: ${({ $isMobile }) => ($isMobile ? "220px" : "auto")};
+  width: ${({ $isMobile }) => ($isMobile ? "100%" : "420px")};
+  height: ${({ $isMobile }) => ($isMobile ? "200px" : "100%")};
   position: relative;
   overflow: hidden;
 `;
@@ -108,7 +109,6 @@ function Project({ project, index }) {
         <Image
           src={image.src}
           alt={image.alt}
-          sizes={image.sizes}
           quality={image.quality}
           priority
           fill
@@ -130,10 +130,12 @@ function Project({ project, index }) {
         <Image
           src={image.src}
           alt={image.alt}
-          sizes={image.sizes}
           quality={image.quality}
           priority
-          fill
+          style={{
+            width: "100%",
+            height: "auto",
+          }}
         />
         <div className="project-description">{description}</div>
       </StyledPic>

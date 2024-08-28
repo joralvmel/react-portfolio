@@ -173,7 +173,6 @@ export const configEn = {
         title: "The Wild Oasis",
         image: {
           src: theWildOasis,
-          sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
           quality: 80,
           alt: `The Wild Oasis Dashboard`,
         },
@@ -194,7 +193,6 @@ export const configEn = {
         title: "The Wild Oasis Website",
         image: {
           src: theWildOasisWebsite,
-          sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
           quality: 80,
           alt: `The Wild Oasis main screen`,
         },
@@ -215,7 +213,6 @@ export const configEn = {
         title: "React Connect Four",
         image: {
           src: connectFour,
-          sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
           quality: 80,
           alt: `Connect Four Game`,
         },
@@ -229,7 +226,6 @@ export const configEn = {
         title: "Watchlist API",
         image: {
           src: watchlist,
-          sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
           quality: 80,
           alt: `Watchlist API Dashboard`,
         },
@@ -244,6 +240,7 @@ export const configEn = {
 
   otherProjects: {
     header: "Other Projects",
+    numProjects: 4,
 
     content: [
       {

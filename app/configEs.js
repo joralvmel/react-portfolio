@@ -25,6 +25,7 @@ export const configEs = {
   githubTitle: "Repositorio de GitHub",
   externalTitle: "Visitar Sitio Web",
   cv: "JorgeAlvarezCV.pdf",
+  numProjects: 3,
 
   buttons: { resume: "CV", more: "Mostrar Más", less: "Mostrar Menos" },
 
@@ -173,7 +174,6 @@ export const configEs = {
         title: "The Wild Oasis",
         image: {
           src: theWildOasis,
-          sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
           quality: 80,
           alt: `Dashboard de The Wild Oasis`,
         },
@@ -194,7 +194,6 @@ export const configEs = {
         title: "The Wild Oasis Website",
         image: {
           src: theWildOasisWebsite,
-          sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
           quality: 80,
           alt: `Pantalla principal de The Wild Oasis`,
         },
@@ -215,7 +214,6 @@ export const configEs = {
         title: "React Connect Four",
         image: {
           src: connectFour,
-          sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
           quality: 80,
           alt: `Juego de Conecta 4`,
         },
@@ -229,7 +227,6 @@ export const configEs = {
         title: "Watchlist API",
         image: {
           src: watchlist,
-          sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
           quality: 80,
           alt: `Dashboard de la Watchlist API`,
         },
@@ -244,6 +241,7 @@ export const configEs = {
 
   otherProjects: {
     header: "Otros Proyectos",
+    numProjects: 4,
 
     content: [
       {

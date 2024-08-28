@@ -42,12 +42,12 @@ const StyledOtherProjectsSection = styled.section`
 
 function OtherProjects() {
   const { config } = useLanguage();
-  const { header, content } = config.otherProjects;
+  const { header, content, numProjects } = config.otherProjects;
   const { more, less } = config.buttons;
 
   const [showAll, setShowAll] = useState(false);
 
-  const displayedProjects = showAll ? content : content.slice(0, 6);
+  const displayedProjects = showAll ? content : content.slice(0, numProjects);
 
   return (
     <StyledOtherProjectsSection id="otherProjects">
