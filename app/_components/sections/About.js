@@ -76,6 +76,7 @@ function About() {
             fill
             onLoad={handleImageLoad}
             priority
+            placeholder="blur"
           />
         </StyledPic>
       </div>

@@ -123,6 +123,7 @@ function Project({ project, index }) {
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           loader={({ src, width }) => `${src}?w=${width}`}
+          placeholder="blur"
         />
         <div className="project-description">
           <span>{description}</span>
@@ -148,6 +149,7 @@ function Project({ project, index }) {
             width: "100%",
             height: "auto",
           }}
+          placeholder="blur"
         />
         <div className="project-description">{description}</div>
       </StyledPic>
