@@ -65,8 +65,6 @@ export const configEs = {
     ],
     profilePic: {
       src: profilePic,
-      sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
-      quality: 80,
       alt: `Mi foto de perfil`,
     },
   },
@@ -174,7 +172,6 @@ export const configEs = {
         title: "The Wild Oasis",
         image: {
           src: theWildOasis,
-          quality: 80,
           alt: `Dashboard de The Wild Oasis`,
         },
         description:
@@ -194,7 +191,6 @@ export const configEs = {
         title: "The Wild Oasis Website",
         image: {
           src: theWildOasisWebsite,
-          quality: 80,
           alt: `Pantalla principal de The Wild Oasis`,
         },
         description:
@@ -214,7 +210,6 @@ export const configEs = {
         title: "React Connect Four",
         image: {
           src: connectFour,
-          quality: 80,
           alt: `Juego de Conecta 4`,
         },
         description:
@@ -227,7 +222,6 @@ export const configEs = {
         title: "Watchlist API",
         image: {
           src: watchlist,
-          quality: 80,
           alt: `Dashboard de la Watchlist API`,
         },
         description:

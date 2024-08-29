@@ -3,6 +3,8 @@ import TechList from "./TechList";
 import ProjectLinks from "./ProjectLinks";
 import Image from "next/image";
 import { useMobile } from "@/app/_context/MobileContext";
+import { useState } from "react";
+import Spinner from "./Spinner";
 
 const StyledProject = styled.li`
   display: flex;
@@ -94,7 +96,13 @@ const StyledPic = styled.div`
 
 function Project({ project, index }) {
   const { isMobile } = useMobile();
+  const [loading, setLoading] = useState(true);
+
   const { title, description, technologies, image, github, external } = project;
+
+  const handleImageLoad = () => {
+    setLoading(false);
+  };
 
   const isEven = index % 2 === 0;
 
@@ -106,12 +114,15 @@ function Project({ project, index }) {
       </div>
 
       <StyledPic $isMobile={isMobile}>
+        {loading && <Spinner />}
         <Image
           src={image.src}
           alt={image.alt}
-          quality={image.quality}
-          priority
+          priority={true}
+          onLoad={handleImageLoad}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          loader={({ src, width }) => `${src}?w=${width}`}
         />
         <div className="project-description">
           <span>{description}</span>
@@ -127,11 +138,12 @@ function Project({ project, index }) {
         <ProjectLinks github={github} external={external} />
       </div>
       <StyledPic $isMobile={isMobile}>
+        {loading && <Spinner />}
         <Image
           src={image.src}
           alt={image.alt}
-          quality={image.quality}
-          priority
+          priority={true}
+          onLoad={handleImageLoad}
           style={{
             width: "100%",
             height: "auto",

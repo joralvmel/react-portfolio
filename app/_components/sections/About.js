@@ -4,6 +4,8 @@ import styled from "styled-components";
 import AboutText from "../AboutText";
 import { useLanguage } from "@/app/_context/LanguageContext";
 import Image from "next/image";
+import { useState } from "react";
+import Spinner from "../Spinner";
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
@@ -50,8 +52,14 @@ const StyledPic = styled.div`
 `;
 
 function About() {
+  const [loading, setLoading] = useState(true);
+
   const { config } = useLanguage();
   const { header, text, skills, profilePic } = config.about;
+
+  const handleImageLoad = () => {
+    setLoading(false);
+  };
 
   return (
     <StyledAboutSection id="about">
@@ -60,12 +68,13 @@ function About() {
       <div className="inner">
         <AboutText text={text} skills={skills} />
         <StyledPic>
+          {loading && <Spinner />}
           <Image
             src={profilePic.src}
             alt={profilePic.alt}
-            sizes={profilePic.sizes}
-            quality={profilePic.quality}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             fill
+            onLoad={handleImageLoad}
             priority
           />
         </StyledPic>
