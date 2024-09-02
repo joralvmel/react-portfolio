@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import Logo from "./Logo";
 import Link from "next/link";
@@ -68,9 +68,14 @@ const StyledLinks = styled.ul`
         text-align: right;
       }
       &:hover,
-      &:focus {
-        color: var(--color-text-light);
+      &:focus,
+      &.active {
+        color: var(--color-accent);
       }
+    }
+
+    &.active a {
+      color: var(--color-accent) !important;
     }
   }
 
@@ -145,6 +150,7 @@ const StyledMobileButton = styled.div`
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [currentSection, setCurrentSection] = useState("");
 
   const { config } = useLanguage();
   const { resume } = config.buttons;
@@ -164,6 +170,37 @@ function Header() {
     document.body.removeChild(link);
   };
 
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (entry.target.id === "otherProjects") {
+            setCurrentSection("projects");
+          } else {
+            setCurrentSection(entry.target.id);
+          }
+        }
+      });
+    }, options);
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        observer.unobserve(section);
+      });
+    };
+  }, []);
+
   return (
     <StyledHeader>
       <Logo />
@@ -175,11 +212,17 @@ function Header() {
 
       <StyledNav>
         <StyledLinks>
-          {config.navLinks.map(({ url, content }, index) => (
-            <li key={index}>
-              <Link href={url}>{content}</Link>
-            </li>
-          ))}
+          {config.navLinks.map(({ url, content }, index) => {
+            const sectionId = url.split("#")[1];
+            return (
+              <li
+                key={index}
+                className={currentSection === sectionId ? "active" : ""}
+              >
+                <Link href={url}>{content}</Link>
+              </li>
+            );
+          })}
         </StyledLinks>
       </StyledNav>
       <StyledMobileButton>
