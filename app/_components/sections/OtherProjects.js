@@ -2,7 +2,7 @@
 
 import styled from "styled-components";
 import Button from "../Button";
-import OtherProject from "../OtherProject";
+import Project from "../Project";
 import { useState } from "react";
 import { useLanguage } from "@/app/_context/LanguageContext";
 
@@ -10,7 +10,11 @@ const StyledOtherProjectsSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 0;
+  padding-top: 40px;
+
+  @media (max-width: 768px) {
+    max-width: 400px;
+  }
 
   h2 {
     font-size: var(--fs-heading);
@@ -54,7 +58,7 @@ function OtherProjects() {
       <h2>{header}</h2>
       <ul className="projects-grid">
         {displayedProjects.map((project, i) => (
-          <OtherProject key={i} project={project} />
+          <Project key={i} project={project} />
         ))}
       </ul>
       <Button onClick={() => setShowAll(!showAll)}>

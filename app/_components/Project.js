@@ -2,56 +2,55 @@ import styled from "styled-components";
 import TechList from "./TechList";
 import ProjectLinks from "./ProjectLinks";
 import Image from "next/image";
-import { useMobile } from "@/app/_context/MobileContext";
 import { useState } from "react";
 import Spinner from "./Spinner";
+import { useLanguage } from "../_context/LanguageContext";
 
 const StyledProject = styled.li`
   display: flex;
+  flex-direction: column;
+  flex: 1 1 calc(50% - 16px);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-tertiary);
+  border-radius: 8px;
+  overflow: hidden;
   list-style: none;
-  align-items: center;
-  padding: 10px 0;
-  flex-direction: ${({ $isEven }) => ($isEven ? "row" : "row-reverse")};
 
-  .project-title {
-    color: var(--color-text);
-    font-size: var(--fs-xxl);
+  &:hover {
+    background-color: var(--color-quaternary);
+    transition: var(--transition-background);
   }
 
-  .project-details {
-    width: 50%;
-    padding: 2rem;
-  }
+  .project-info {
+    padding: 20px;
 
-  .project-description {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 25px 5px;
-    background-color: var(--color-image-overlay);
-    color: var(--color-text-light);
-    font-size: var(--fs-lg);
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    text-align: center;
+    .project-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
 
-    &:hover {
-      transition: var(--transition-image);
-      background-color: transparent;
-      color: transparent;
+      .left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .folder {
+          color: var(--color-accent);
+          svg {
+            width: 30px;
+            height: 30px;
+          }
+        }
+
+        .project-title {
+          color: var(--color-text);
+          font-size: var(--fs-xxl);
+          margin: 0;
+        }
+      }
     }
   }
-`;
-
-const StyledMobileProject = styled.li`
-  display: flex;
-  list-style: none;
-  padding: 20px 0;
-  flex-direction: column;
 
   .project-header {
     display: flex;
@@ -59,100 +58,74 @@ const StyledMobileProject = styled.li`
     align-items: center;
   }
 
-  .project-title {
-    margin: 0;
-  }
-
   .project-details {
-    padding: 20px;
+    padding: 10px 0;
   }
 
   .project-description {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 15px 3px;
-    background-color: var(--color-image-overlay);
+    padding: 20px 0;
     color: var(--color-text-light);
-    font-size: var(--fs-md);
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
+    font-size: var(--fs-lg);
+  }
+
+  @media (max-width: 768px) {
+    flex: 1 1 100%;
+
+    .project-title {
+      font-size: var(--fs-xl);
+    }
+
+    .project-description {
+      font-size: var(--fs-md);
+    }
   }
 `;
 
 const StyledPic = styled.div`
-  width: ${({ $isMobile }) => ($isMobile ? "100%" : "420px")};
-  height: ${({ $isMobile }) => ($isMobile ? "200px" : "100%")};
+  width: 100%;
+  height: auto;
   position: relative;
   overflow: hidden;
 `;
 
-function Project({ project, index }) {
-  const { isMobile } = useMobile();
+function Project({ project }) {
+  const { config } = useLanguage();
   const [loading, setLoading] = useState(true);
-
   const { title, description, technologies, image, github, external } = project;
+  const { folder } = config.icons;
 
   const handleImageLoad = () => {
     setLoading(false);
   };
 
-  const isEven = index % 2 === 0;
-
-  return isMobile ? (
-    <StyledMobileProject>
-      <div className="project-header">
-        <h3 className="project-title">{title}</h3>
-        <ProjectLinks github={github} external={external} />
-      </div>
-
-      <StyledPic $isMobile={isMobile}>
-        {loading && <Spinner />}
-        <Image
-          src={image.src}
-          alt={image.alt}
-          priority={true}
-          onLoad={handleImageLoad}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          loader={({ src, width }) => `${src}?w=${width}`}
-          placeholder="blur"
-        />
-        <div className="project-description">
-          <span>{description}</span>
-          <TechList technologies={technologies} />
+  return (
+    <StyledProject>
+      {image && (
+        <StyledPic>
+          {loading && <Spinner />}
+          <Image
+            src={image.src}
+            alt={image.alt}
+            onLoad={handleImageLoad}
+            style={{
+              width: "100%",
+              height: "auto",
+            }}
+            placeholder="blur"
+          />
+        </StyledPic>
+      )}
+      <div className="project-info">
+        <div className="project-top">
+          <div className="left">
+            {!image && <div className="folder">{folder}</div>}
+            <h3 className="project-title">{title}</h3>
+          </div>
+          <ProjectLinks github={github} external={external} />
         </div>
-      </StyledPic>
-    </StyledMobileProject>
-  ) : (
-    <StyledProject $isEven={isEven}>
-      <div className="project-details">
-        <h3 className="project-title">{title}</h3>
-        <TechList technologies={technologies} />
-        <ProjectLinks github={github} external={external} />
-      </div>
-      <StyledPic $isMobile={isMobile}>
-        {loading && <Spinner />}
-        <Image
-          src={image.src}
-          alt={image.alt}
-          priority={true}
-          onLoad={handleImageLoad}
-          style={{
-            width: "100%",
-            height: "auto",
-          }}
-          placeholder="blur"
-        />
         <div className="project-description">{description}</div>
-      </StyledPic>
+        <TechList technologies={technologies} />
+      </div>
     </StyledProject>
   );
 }

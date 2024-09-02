@@ -235,7 +235,7 @@ export const configEs = {
 
   otherProjects: {
     header: "Otros Proyectos",
-    numProjects: 4,
+    numProjects: 3,
 
     content: [
       {
