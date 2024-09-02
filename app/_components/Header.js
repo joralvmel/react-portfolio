@@ -57,6 +57,10 @@ const StyledLinks = styled.ul`
     counter-increment: item 1;
     font-size: var(--fs-xs);
 
+    &.active a {
+      color: var(--color-accent);
+    }
+
     a {
       padding: 10px;
 
@@ -67,15 +71,9 @@ const StyledLinks = styled.ul`
         font-size: var(--fs-xxs);
         text-align: right;
       }
-      &:hover,
-      &:focus,
-      &.active {
-        color: var(--color-accent);
+      &:hover {
+        color: var(--color-accent-hover);
       }
-    }
-
-    &.active a {
-      color: var(--color-accent) !important;
     }
   }
 
@@ -116,6 +114,10 @@ const StyledMobileLinks = styled.ul`
     font-size: var(--fs-lg);
     width: 100%;
 
+    &.active a {
+      color: var(--color-accent);
+    }
+
     a {
       padding: 0.5rem;
       width: 100%;
@@ -127,9 +129,8 @@ const StyledMobileLinks = styled.ul`
         font-size: var(--fs-xxs);
         text-align: right;
       }
-      &:hover,
-      &:focus {
-        color: var(--color-text-light);
+      &:hover {
+        color: var(--color-accent-hover);
       }
     }
   }
@@ -181,11 +182,10 @@ function Header() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          if (entry.target.id === "otherProjects") {
-            setCurrentSection("projects");
-          } else {
-            setCurrentSection(entry.target.id);
-          }
+          const sectionId =
+            entry.target.id === "otherProjects" ? "projects" : entry.target.id;
+          setCurrentSection(sectionId);
+          history.pushState(null, "", `#${sectionId}`);
         }
       });
     }, options);
@@ -231,13 +231,19 @@ function Header() {
 
       <StyledHamburgerMenu onClick={toggleMenu}>{menu}</StyledHamburgerMenu>
       <StyledMobileLinks $isOpen={isOpen}>
-        {config.navLinks.map(({ url, content }, index) => (
-          <li key={index}>
-            <Link href={url} onClick={toggleMenu}>
-              {content}
-            </Link>
-          </li>
-        ))}
+        {config.navLinks.map(({ url, content }, index) => {
+          const sectionId = url.split("#")[1];
+          return (
+            <li
+              key={index}
+              className={currentSection === sectionId ? "active" : ""}
+            >
+              <Link href={url} onClick={toggleMenu}>
+                {content}
+              </Link>
+            </li>
+          );
+        })}
         <li>
           <Button onClick={handleDownload} width="100%">
             {resume}
