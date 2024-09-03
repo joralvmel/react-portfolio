@@ -17,8 +17,8 @@ import {
   FaSun,
   FaBars,
 } from "react-icons/fa6";
-
-import { FaExternalLinkAlt, FaLanguage } from "react-icons/fa";
+import { FaExternalLinkAlt } from "react-icons/fa";
+import { GrLanguage } from "react-icons/gr";
 
 export const configEn = {
   email: "joralvmel@gmail.com",
@@ -35,7 +35,7 @@ export const configEn = {
     folder: <FaRegFolder />,
     moon: <FaMoon />,
     sun: <FaSun />,
-    language: <FaLanguage />,
+    language: <GrLanguage />,
     menu: <FaBars />,
   },
 
