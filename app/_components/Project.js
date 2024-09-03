@@ -2,6 +2,7 @@ import styled from "styled-components";
 import TechList from "./TechList";
 import ProjectLinks from "./ProjectLinks";
 import Image from "next/image";
+import Link from "next/link"; // Import Link from next/link
 import { useState } from "react";
 import Spinner from "./Spinner";
 import { useLanguage } from "../_context/LanguageContext";
@@ -86,6 +87,14 @@ const StyledPic = styled.div`
   height: auto;
   position: relative;
   overflow: hidden;
+
+  filter: opacity(60%) drop-shadow(0 0 0 var(--color-tertiary));
+  transition: filter 0.3s ease;
+
+  &:hover {
+    filter: opacity(100%) drop-shadow(0 0 0 transparent);
+    cursor: pointer;
+  }
 `;
 
 function Project({ project }) {
@@ -103,16 +112,23 @@ function Project({ project }) {
       {image && (
         <StyledPic>
           {loading && <Spinner />}
-          <Image
-            src={image.src}
-            alt={image.alt}
-            onLoad={handleImageLoad}
-            style={{
-              width: "100%",
-              height: "auto",
-            }}
-            placeholder="blur"
-          />
+          <a
+            href={external}
+            target="_blank"
+            rel="noopener noreferrer"
+            title={title}
+          >
+            <Image
+              src={image.src}
+              alt={image.alt}
+              onLoad={handleImageLoad}
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
+              placeholder="blur"
+            />
+          </a>
         </StyledPic>
       )}
       <div className="project-info">
