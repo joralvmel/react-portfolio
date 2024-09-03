@@ -11,21 +11,33 @@ const StyledHeroSection = styled.section`
   align-items: flex-start;
   height: 100vh;
   padding: 0px;
-  h1 {
+
+  .small-heading {
     color: var(--color-secondary);
-    margin: 0 0 20px 5px;
+    margin: 0;
     font-size: var(--fs-lg);
     font-weight: 400;
   }
 
-  h2 {
+  .big-heading {
+    font-size: clamp(40px, 8vw, 80px);
     color: var(--color-accent);
-    margin: 0 0 40px 4px;
+    margin: 10px 10px;
     font-weight: 400;
+
+    @media (max-width: 768px) {
+      font-size: clamp(20px, 8vw, 40px);
+    }
   }
 
-  h3 {
+  .medium-heading {
     color: var(--color-secondary);
+    margin: 0;
+    font-size: clamp(40px, 8vw, 60px);
+
+    @media (max-width: 768px) {
+      font-size: clamp(20px, 8vw, 30px);
+    }
   }
 
   .text {
@@ -46,7 +58,7 @@ function Hero() {
 
   return (
     <StyledHeroSection id="hero">
-      <h1>{title}</h1>
+      <h1 className="small-heading">{title}</h1>
       <h2 className="big-heading">{name}</h2>
       <h3 className="medium-heading">
         <ReactTypingEffect

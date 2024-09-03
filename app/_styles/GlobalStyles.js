@@ -75,16 +75,6 @@ const GlobalStyle = createGlobalStyle`
     max-width: 1000px;
   }
 
-  .big-heading {
-    margin: 0;
-    font-size: clamp(40px, 8vw, 80px);
-  }
-
-  .medium-heading {
-    margin: 0;
-    font-size: clamp(40px, 8vw, 60px);
-  }
-
   .numbered-heading {
     display: flex;
     align-items: center;
@@ -103,8 +93,6 @@ const GlobalStyle = createGlobalStyle`
       color: var(--color-accent);
       font-size: clamp(var(--fs-md), 3vw, var(--fs-xl));
       font-weight: 400;
-
-  
     }
 
     &:after {
@@ -143,22 +131,6 @@ const GlobalStyle = createGlobalStyle`
     border: 0;
     border-radius: 0;
   }
-
-  input, textarea {
-    border-radius: 0;
-    outline: 0;
-
-    &:focus {
-      outline: 0;
-    }
-    &:focus,
-    &:active {
-      &::placeholder {
-        opacity: 0.5;
-      }
-    }
-  }
-
 `;
 
 export default GlobalStyle;
