@@ -46,16 +46,16 @@ const StyledOtherProjectsSection = styled.section`
 
 function OtherProjects() {
   const { config } = useLanguage();
-  const { header, content, numProjects } = config.otherProjects;
+  const [showAll, setShowAll] = useState(false);
+  const { header2, content } = config.projects;
   const { more, less } = config.buttons;
 
-  const [showAll, setShowAll] = useState(false);
-
-  const displayedProjects = showAll ? content : content.slice(0, numProjects);
+  const otherProjects = content.filter((project) => !project.image);
+  const displayedProjects = showAll ? otherProjects : otherProjects.slice(0, 3);
 
   return (
     <StyledOtherProjectsSection id="otherProjects">
-      <h2>{header}</h2>
+      <h2>{header2}</h2>
       <ul className="projects-grid">
         {displayedProjects.map((project, i) => (
           <Project key={i} project={project} />

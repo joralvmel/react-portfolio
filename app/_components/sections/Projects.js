@@ -34,9 +34,11 @@ function Projects() {
     <StyledProjectsSection id="projects">
       <h2 className="numbered-heading">{header}</h2>
       <ul className="project-list">
-        {content.map((project, i) => (
-          <Project project={project} key={i} />
-        ))}
+        {content
+          .filter((project) => project.image)
+          .map((project, i) => (
+            <Project project={project} key={i} />
+          ))}
       </ul>
     </StyledProjectsSection>
   );

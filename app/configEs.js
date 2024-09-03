@@ -166,14 +166,11 @@ export const configEs = {
 
   projects: {
     header: "Proyectos",
+    heade2: "Otros Proyectos",
 
     content: [
       {
         title: "The Wild Oasis",
-        image: {
-          src: theWildOasis,
-          alt: `Dashboard de The Wild Oasis`,
-        },
         description:
           "Una aplicación diseñada para gestionar check-ins y check-outs en un hotel boutique, incluyendo un panel de control para administradores y otras opciones de configuración para el personal del hotel.",
         technologies: [
@@ -186,13 +183,13 @@ export const configEs = {
         ],
         github: "https://github.com/joralvmel/react-the-wild-oasis",
         external: "https://react-the-wild-oasis-nine.vercel.app/",
+        image: {
+          src: theWildOasis,
+          alt: `Dashboard de The Wild Oasis`,
+        },
       },
       {
         title: "The Wild Oasis Website",
-        image: {
-          src: theWildOasisWebsite,
-          alt: `Pantalla principal de The Wild Oasis`,
-        },
         description:
           "Un sitio web diseñado para un hotel boutique, que incluye un sistema de reservas, funcionalidad de inicio de sesión con gestión de reservas y usuarios.",
         technologies: [
@@ -205,39 +202,35 @@ export const configEs = {
         ],
         github: "https://github.com/joralvmel/the-wild-oasis-website",
         external: "https://the-wild-oasis-website-eta-eight.vercel.app/",
+        image: {
+          src: theWildOasisWebsite,
+          alt: `Pantalla principal de The Wild Oasis`,
+        },
       },
       {
         title: "React Connect Four",
-        image: {
-          src: connectFour,
-          alt: `Juego de Conecta 4`,
-        },
         description:
           "Un sencillo juego de Conecta Cuatro construido con React, donde dos jugadores pueden jugar entre sí.",
         technologies: ["React", "CSS", "Node.js"],
         github: "https://github.com/joralvmel/react-connect-four",
         external: "https://react-conncect-four-joralvmel.netlify.app/",
+        image: {
+          src: connectFour,
+          alt: `Juego de Conecta 4`,
+        },
       },
       {
         title: "Watchlist API",
-        image: {
-          src: watchlist,
-          alt: `Dashboard de la Watchlist API`,
-        },
         description:
           "Una aplicación para llevar un registro de tus películas y programas de TV favoritos con la funcionalidad de crear listas de seguimiento y proporcionar información sobre películas o programas de TV.",
         technologies: ["EJS", "CSS", "Node.js", "jQuery", "API"],
         github: "https://github.com/joralvmel/watchlist-api",
         external: "https://joralvmel-watchlist-api.onrender.com/",
+        image: {
+          src: watchlist,
+          alt: `Dashboard de la Watchlist API`,
+        },
       },
-    ],
-  },
-
-  otherProjects: {
-    header: "Otros Proyectos",
-    numProjects: 3,
-
-    content: [
       {
         title: "Simon",
         description:
