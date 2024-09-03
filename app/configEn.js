@@ -42,7 +42,11 @@ export const configEn = {
   hero: {
     title: "Hi, my name is",
     name: "Jorge Álvarez",
-    header: "I build web applications.",
+    headers: [
+      "Front End Developer.",
+      "React Developer.",
+      "Full Stack Developer.",
+    ],
     text: " As a Software Engineer, I see coding as both an art and a science. My passion lies in crafting beautiful, intuitive interfaces using React, where creativity meets functionality. Every project is an opportunity to push boundaries, innovate, and bring ideas to life in a way that resonates with users.",
   },
 

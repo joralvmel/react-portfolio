@@ -1,6 +1,7 @@
 "use client";
 
 import styled from "styled-components";
+import ReactTypingEffect from "react-typing-effect";
 import { useLanguage } from "@/app/_context/LanguageContext";
 
 const StyledHeroSection = styled.section`
@@ -41,13 +42,21 @@ const StyledHeroSection = styled.section`
 
 function Hero() {
   const { config } = useLanguage();
-  const { title, name, header, text } = config.hero;
+  const { title, name, text, headers } = config.hero;
 
   return (
     <StyledHeroSection id="hero">
       <h1>{title}</h1>
       <h2 className="big-heading">{name}</h2>
-      <h3 className="medium-heading">{header}</h3>
+      <h3 className="medium-heading">
+        <ReactTypingEffect
+          text={headers}
+          speed={80}
+          eraseSpeed={50}
+          eraseDelay={3000}
+          typingDelay={500}
+        />
+      </h3>
       <p className="text">{text}</p>
     </StyledHeroSection>
   );

@@ -43,7 +43,11 @@ export const configEs = {
   hero: {
     title: "Hola, soy",
     name: "Jorge Álvarez",
-    header: "Hago cosas en la web.",
+    headers: [
+      "Desarrollador Front End.",
+      "Desarrollador React.",
+      "Desarrollador Full Stack.",
+    ],
     text: " Como Ingeniero de Software, veo la programación tanto como un arte y una ciencia. Mi pasión reside en crear interfaces hermosas e intuitivas usando React, donde la creatividad se encuentra con la funcionalidad. Cada proyecto es una oportunidad para superar límites, innovar y dar vida a ideas de una manera que resuene con los usuarios.",
   },
 
