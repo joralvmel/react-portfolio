@@ -4,6 +4,8 @@ import variables from "@/app/_styles/variables";
 const GlobalStyle = createGlobalStyle`
   ${variables};
 
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
   html {
     box-sizing: border-box;
     width: 100%;
@@ -29,14 +31,6 @@ const GlobalStyle = createGlobalStyle`
   ::-webkit-scrollbar {
     width: 12px;
   }
-  ::-webkit-scrollbar-track {
-    background: var(--color-background);
-  }
-  ::-webkit-scrollbar-thumb {
-    background-color: var(--color-accent);
-    border: 3px solid var(--color-background);
-    border-radius: 10px;
-  }
 
   body {
     margin: 0;
@@ -49,6 +43,7 @@ const GlobalStyle = createGlobalStyle`
     color: var(--color-text);
     font-size: var(--fs-xl);
     line-height: 1.3;
+    font-family: 'Roboto', sans-serif;
 
     &.hidden {
       overflow: hidden;

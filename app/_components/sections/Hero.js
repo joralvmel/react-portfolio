@@ -26,7 +26,7 @@ const StyledHeroSection = styled.section`
     font-weight: 400;
 
     @media (max-width: 768px) {
-      font-size: clamp(20px, 8vw, 40px);
+      font-size: clamp(20px, 12vw, 40px);
     }
   }
 
@@ -36,7 +36,7 @@ const StyledHeroSection = styled.section`
     font-size: clamp(40px, 8vw, 60px);
 
     @media (max-width: 768px) {
-      font-size: clamp(20px, 8vw, 30px);
+      font-size: clamp(20px, 6vw, 30px);
     }
   }
 
