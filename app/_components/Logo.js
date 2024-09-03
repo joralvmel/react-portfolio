@@ -11,8 +11,19 @@ const StyledLogo = styled.div`
     width: 40px;
     height: 40px;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid var(--color-accent);
     &:hover {
       color: var(--color-accent-hover);
+      border-color: var(--color-accent-hover);
+    }
+
+    svg {
+      width: 60%;
+      height: 60%;
     }
   }
 `;
