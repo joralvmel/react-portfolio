@@ -1,3 +1,5 @@
+"use client";
+
 import { createContext, useContext, useState } from "react";
 import { configEs } from "@/app/configEs";
 import { configEn } from "@/app/configEn";

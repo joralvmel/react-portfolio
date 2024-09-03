@@ -1,5 +1,7 @@
-import ButtonToggle from "./ButtonToggle";
-import { useLanguage } from "../_context/LanguageContext";
+"use client";
+
+import ButtonToggle from "@/app/_components/ButtonToggle";
+import { useLanguage } from "@/app/_context/LanguageContext";
 
 function LanguageToggle() {
   const { config, toggleLanguage } = useLanguage();

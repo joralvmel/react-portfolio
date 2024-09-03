@@ -1,8 +1,9 @@
 "use client";
 
 import styled from "styled-components";
-import Project from "../Project";
+
 import { useLanguage } from "@/app/_context/LanguageContext";
+import Project from "@/app/_components/Project";
 
 const StyledProjectsSection = styled.section`
   max-width: 900px;

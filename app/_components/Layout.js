@@ -1,10 +1,11 @@
 "use client";
 
 import styled from "styled-components";
+
 import GlobalStyles from "@/app/_styles/GlobalStyles";
-import Footer from "./Footer";
-import Header from "./Header";
-import Side from "./Side";
+import Footer from "@/app/_components/Footer";
+import Header from "@/app/_components/Header";
+import Side from "@/app/_components/Side";
 
 const StyledContent = styled.div`
   display: flex;

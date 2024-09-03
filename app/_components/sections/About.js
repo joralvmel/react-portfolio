@@ -1,11 +1,11 @@
-"use client";
+import { useState } from "react";
 
 import styled from "styled-components";
-import AboutText from "../AboutText";
-import { useLanguage } from "@/app/_context/LanguageContext";
 import Image from "next/image";
-import { useState } from "react";
-import Spinner from "../Spinner";
+
+import { useLanguage } from "@/app/_context/LanguageContext";
+import AboutText from "@/app/_components/AboutText";
+import Spinner from "@/app/_components/Spinner";
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
@@ -52,10 +52,10 @@ const StyledPic = styled.div`
 `;
 
 function About() {
-  const [loading, setLoading] = useState(true);
-
   const { config } = useLanguage();
   const { header, text, skills, profilePic } = config.about;
+
+  const [loading, setLoading] = useState(true);
 
   const handleImageLoad = () => {
     setLoading(false);

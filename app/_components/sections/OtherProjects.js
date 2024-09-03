@@ -1,10 +1,11 @@
 "use client";
 
-import styled from "styled-components";
-import Button from "../Button";
-import Project from "../Project";
 import { useState } from "react";
+import styled from "styled-components";
+
 import { useLanguage } from "@/app/_context/LanguageContext";
+import Button from "@/app/_components/Button";
+import Project from "@/app/_components/Project";
 
 const StyledOtherProjectsSection = styled.section`
   display: flex;
@@ -46,9 +47,10 @@ const StyledOtherProjectsSection = styled.section`
 
 function OtherProjects() {
   const { config } = useLanguage();
-  const [showAll, setShowAll] = useState(false);
   const { header2, content } = config.projects;
   const { more, less } = config.buttons;
+
+  const [showAll, setShowAll] = useState(false);
 
   const otherProjects = content.filter((project) => !project.image);
   const displayedProjects = showAll ? otherProjects : otherProjects.slice(0, 3);

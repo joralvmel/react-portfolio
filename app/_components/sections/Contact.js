@@ -1,7 +1,7 @@
 "use client";
 
-import { useLanguage } from "@/app/_context/LanguageContext";
 import styled from "styled-components";
+import { useLanguage } from "@/app/_context/LanguageContext";
 
 const StyledContactSection = styled.section`
   max-width: 900px;

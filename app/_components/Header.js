@@ -2,12 +2,13 @@
 
 import { useState, useEffect } from "react";
 import styled from "styled-components";
-import Logo from "./Logo";
 import Link from "next/link";
-import Button from "./Button";
-import DarkModeToggle from "./DarkModeToggle";
-import LanguageToggle from "./LanguageToggle";
-import { useLanguage } from "../_context/LanguageContext";
+
+import { useLanguage } from "@/app/_context/LanguageContext";
+import Logo from "@/app/_components/Logo";
+import Button from "@/app/_components/Button";
+import DarkModeToggle from "@/app/_components/DarkModeToggle";
+import LanguageToggle from "@/app/_components/LanguageToggle";
 
 const StyledHeader = styled.header`
   position: fixed;

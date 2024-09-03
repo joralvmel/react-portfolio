@@ -1,8 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import styled from "styled-components";
-import { useLanguage } from "../_context/LanguageContext";
+import Link from "next/link";
+
+import { useLanguage } from "@/app/_context/LanguageContext";
 
 const StyledLogo = styled.div`
   a {
@@ -19,6 +20,7 @@ const StyledLogo = styled.div`
 function Logo() {
   const { config } = useLanguage();
   const { logo } = config.icons;
+
   return (
     <StyledLogo className="logo">
       <Link href="/" aria-label="home">

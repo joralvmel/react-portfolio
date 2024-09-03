@@ -1,7 +1,8 @@
 "use client";
-import StyledComponentsRegistry from "./_lib/registry";
-import { DarkModeProvider } from "./_context/DarkModeContext";
-import { LanguageProvider } from "./_context/LanguageContext";
+
+import StyledComponentsRegistry from "@/app/_lib/registry";
+import { DarkModeProvider } from "@/app/_context/DarkModeContext";
+import { LanguageProvider } from "@/app/_context/LanguageContext";
 
 export default function RootLayout({ children }) {
   return (

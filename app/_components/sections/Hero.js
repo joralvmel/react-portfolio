@@ -42,6 +42,7 @@ const StyledHeroSection = styled.section`
 function Hero() {
   const { config } = useLanguage();
   const { title, name, header, text } = config.hero;
+
   return (
     <StyledHeroSection id="hero">
       <h1>{title}</h1>

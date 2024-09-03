@@ -1,8 +1,8 @@
 "use client";
 
 import styled from "styled-components";
-import { useLanguage } from "../_context/LanguageContext";
-import Social from "./Social";
+import { useLanguage } from "@/app/_context/LanguageContext";
+import Social from "@/app/_components/Social";
 
 const StyledFooter = styled.footer`
   flex-direction: column;
@@ -60,6 +60,7 @@ const FooterSocialList = styled.div`
 function Footer() {
   const { config } = useLanguage();
   const { text, url } = config.footer;
+
   return (
     <StyledFooter>
       <FooterSocialList>

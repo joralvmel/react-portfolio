@@ -1,7 +1,7 @@
 "use client";
 
 import styled from "styled-components";
-import { useLanguage } from "../_context/LanguageContext";
+import { useLanguage } from "@/app/_context/LanguageContext";
 
 const StyledSocialList = styled.ul`
   display: flex;
@@ -42,6 +42,7 @@ const StyledSocialList = styled.ul`
 function Social() {
   const { config } = useLanguage();
   const { socialMedia } = config;
+
   return (
     <StyledSocialList>
       {socialMedia.map(({ url, name, content, icon }, i) => (

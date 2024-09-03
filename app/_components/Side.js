@@ -1,7 +1,7 @@
 "use client";
 
 import styled from "styled-components";
-import Social from "./Social";
+import Social from "@/app/_components/Social";
 
 const StyledSideElement = styled.div`
   position: fixed;

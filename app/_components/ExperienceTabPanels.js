@@ -1,7 +1,7 @@
 "use client";
 
 import styled from "styled-components";
-import ExperienceTabPanel from "./ExperienceTabPanel";
+import ExperienceTabPanel from "@/app/_components/ExperienceTabPanel";
 
 const StyledExperienceTabPanels = styled.div`
   position: relative;

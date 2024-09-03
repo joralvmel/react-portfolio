@@ -1,7 +1,7 @@
 "use client";
 
 import styled from "styled-components";
-import TechList from "./TechList";
+import TechList from "@/app/_components/TechList";
 
 const StyledExperienceTabPanel = styled.div`
   width: 100%;

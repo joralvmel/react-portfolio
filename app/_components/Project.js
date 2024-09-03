@@ -1,11 +1,13 @@
-import styled from "styled-components";
-import TechList from "./TechList";
-import ProjectLinks from "./ProjectLinks";
-import Image from "next/image";
-import Link from "next/link"; // Import Link from next/link
+"use client";
+
 import { useState } from "react";
-import Spinner from "./Spinner";
-import { useLanguage } from "../_context/LanguageContext";
+import styled from "styled-components";
+import Image from "next/image";
+
+import { useLanguage } from "@/app/_context/LanguageContext";
+import TechList from "@/app/_components/TechList";
+import ProjectLinks from "@/app/_components/ProjectLinks";
+import Spinner from "@/app/_components/Spinner";
 
 const StyledProject = styled.li`
   display: flex;
@@ -99,9 +101,11 @@ const StyledPic = styled.div`
 
 function Project({ project }) {
   const { config } = useLanguage();
-  const [loading, setLoading] = useState(true);
-  const { title, description, technologies, image, github, external } = project;
   const { folder } = config.icons;
+
+  const [loading, setLoading] = useState(true);
+
+  const { title, description, technologies, image, github, external } = project;
 
   const handleImageLoad = () => {
     setLoading(false);

@@ -1,6 +1,8 @@
-import ButtonToggle from "./ButtonToggle";
-import { useDarkMode } from "../_context/DarkModeContext";
-import { useLanguage } from "../_context/LanguageContext";
+"use client";
+
+import { useDarkMode } from "@/app/_context/DarkModeContext";
+import { useLanguage } from "@/app/_context/LanguageContext";
+import ButtonToggle from "@/app/_components/ButtonToggle";
 
 function DarkModeToggle() {
   const { config } = useLanguage();
