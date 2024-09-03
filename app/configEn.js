@@ -7,7 +7,7 @@ import theWildOasis from "@/public/the-wild-oasis.png";
 import theWildOasisWebsite from "@/public/the-wild-oasis-website.png";
 
 import {
-  FaReact,
+  FaJ,
   FaGithub,
   FaInstagram,
   FaXTwitter,
@@ -29,7 +29,7 @@ export const configEn = {
   buttons: { resume: "CV", more: "Show More", less: "Show Less" },
 
   icons: {
-    logo: <FaReact />,
+    logo: <FaJ />,
     github: <FaGithub />,
     external: <FaExternalLinkAlt />,
     folder: <FaRegFolder />,
