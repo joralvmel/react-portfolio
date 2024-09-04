@@ -4,8 +4,6 @@ import variables from "@/app/_styles/variables";
 const GlobalStyle = createGlobalStyle`
   ${variables};
 
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
   html {
     box-sizing: border-box;
     width: 100%;
@@ -43,7 +41,6 @@ const GlobalStyle = createGlobalStyle`
     color: var(--color-text);
     font-size: var(--fs-xl);
     line-height: 1.3;
-    font-family: 'Roboto', sans-serif;
 
     &.hidden {
       overflow: hidden;
