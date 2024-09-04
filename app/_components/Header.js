@@ -21,6 +21,16 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   gap: 1rem;
   z-index: 1000;
+  transition: background-color 0.3s ease-in-out;
+
+  &.transparent {
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.5
+    ); /* Adjust the color and opacity as needed */
+  }
 
   @media (min-width: 768px) {
     padding: 0 1.5rem;
@@ -41,9 +51,20 @@ const StyledButtonContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 100%;
-  gap: 0.5rem;
-  padding-left: 1rem;
+  gap: 1rem;
+
+  @media (max-width: 768px) {
+    padding-right: 1rem;
+  }
+
+  button {
+    padding: 0.5rem;
+
+    svg {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
 `;
 
 const StyledLinks = styled.ul`
@@ -96,6 +117,7 @@ const StyledHamburgerMenu = styled.div`
 
   @media (max-width: 768px) {
     display: block;
+    order: 1;
   }
 `;
 
@@ -131,7 +153,7 @@ const StyledMobileLinks = styled.ul`
         text-align: right;
       }
       &:hover {
-        color: var(--color-accent-hover);
+        color: var (--color-accent-hover);
       }
     }
   }
@@ -153,6 +175,8 @@ const StyledMobileButton = styled.div`
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentSection, setCurrentSection] = useState("");
+  const [isScrollingUp, setIsScrollingUp] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const { config } = useLanguage();
   const { resume } = config.buttons;
@@ -202,14 +226,26 @@ function Header() {
     };
   }, []);
 
-  return (
-    <StyledHeader>
-      <Logo />
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY) {
+        setIsScrollingUp(false);
+      } else {
+        setIsScrollingUp(true);
+      }
+      setLastScrollY(window.scrollY);
+    };
 
-      <StyledButtonContainer>
-        <DarkModeToggle />
-        <LanguageToggle />
-      </StyledButtonContainer>
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
+
+  return (
+    <StyledHeader className={isScrollingUp ? "" : "transparent"}>
+      <Logo />
 
       <StyledNav>
         <StyledLinks>
@@ -226,11 +262,18 @@ function Header() {
           })}
         </StyledLinks>
       </StyledNav>
+
       <StyledMobileButton>
         <Button onClick={handleDownload}>{resume}</Button>
       </StyledMobileButton>
 
       <StyledHamburgerMenu onClick={toggleMenu}>{menu}</StyledHamburgerMenu>
+
+      <StyledButtonContainer>
+        <DarkModeToggle />
+        <LanguageToggle />
+      </StyledButtonContainer>
+
       <StyledMobileLinks $isOpen={isOpen}>
         {config.navLinks.map(({ url, content }, index) => {
           const sectionId = url.split("#")[1];
