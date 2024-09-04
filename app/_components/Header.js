@@ -24,12 +24,7 @@ const StyledHeader = styled.header`
   transition: background-color 0.3s ease-in-out;
 
   &.transparent {
-    background-color: rgba(
-      0,
-      0,
-      0,
-      0.5
-    ); /* Adjust the color and opacity as needed */
+    background-color: var(--color-header-transparent);
   }
 
   @media (min-width: 768px) {

@@ -56,36 +56,25 @@ function About() {
   const { config } = useLanguage();
   const { header, text, skills, profilePic } = config.about;
 
-  const [loading, setLoading] = useState(true);
-
-  const handleImageLoad = () => {
-    setLoading(false);
-  };
-
   return (
     <RevealOnScroll>
       <StyledAboutSection id="about">
         <h2 className="numbered-heading">{header}</h2>
-        <RevealOnScroll>
-          <div className="inner">
-            <AboutText text={text} skills={skills} />
-            <RevealOnScroll>
-              <StyledPic>
-                {loading && <Spinner />}
-                <Image
-                  src={profilePic.src}
-                  alt={profilePic.alt}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  fill
-                  onLoad={handleImageLoad}
-                  priority
-                  placeholder="blur"
-                />
-              </StyledPic>
-            </RevealOnScroll>
-          </div>
-        </RevealOnScroll>
-      </StyledAboutSection>{" "}
+        <div className="inner">
+          <AboutText text={text} skills={skills} />
+          <StyledPic>
+            <Image
+              src={profilePic.src}
+              alt={profilePic.alt}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              fill
+              quality={80}
+              priority
+              placeholder="blur"
+            />
+          </StyledPic>
+        </div>
+      </StyledAboutSection>
     </RevealOnScroll>
   );
 }

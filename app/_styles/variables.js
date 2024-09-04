@@ -8,6 +8,7 @@ const variables = css`
       --color-text: #242424;
       --color-text-light: #121212;
       --color-header: #dedede;
+      --color-header-transparent: rgba(222, 222, 222, 0.6);
       --color-background: #d9d9d9;
       --color-primary: #878787;
       --color-secondary: #545454;
@@ -22,6 +23,7 @@ const variables = css`
       --color-text: #dbdbdb;
       --color-text-light: #ededed;
       --color-header: #222222;
+      --color-header-transparent: rgba(34, 34, 34, 0.6);
       --color-background: #262626;
       --color-primary: #777777;
       --color-secondary: #ababab;
