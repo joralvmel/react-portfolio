@@ -8,6 +8,7 @@ import { useLanguage } from "@/app/_context/LanguageContext";
 import TechList from "@/app/_components/TechList";
 import ProjectLinks from "@/app/_components/ProjectLinks";
 import Spinner from "@/app/_components/Spinner";
+import RevealOnScroll from "@/app/_components/RevealOnScroll";
 
 const StyledProject = styled.li`
   display: flex;
@@ -135,17 +136,19 @@ function Project({ project }) {
           </a>
         </StyledPic>
       )}
-      <div className="project-info">
-        <div className="project-top">
-          <div className="left">
-            {!image && <div className="folder">{folder}</div>}
-            <h3 className="project-title">{title}</h3>
+      <RevealOnScroll>
+        <div className="project-info">
+          <div className="project-top">
+            <div className="left">
+              {!image && <div className="folder">{folder}</div>}
+              <h3 className="project-title">{title}</h3>
+            </div>
+            <ProjectLinks github={github} external={external} />
           </div>
-          <ProjectLinks github={github} external={external} />
+          <div className="project-description">{description}</div>
+          <TechList technologies={technologies} />
         </div>
-        <div className="project-description">{description}</div>
-        <TechList technologies={technologies} />
-      </div>
+      </RevealOnScroll>
     </StyledProject>
   );
 }

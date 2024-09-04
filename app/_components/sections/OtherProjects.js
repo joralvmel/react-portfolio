@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { useLanguage } from "@/app/_context/LanguageContext";
 import Button from "@/app/_components/Button";
 import Project from "@/app/_components/Project";
+import RevealOnScroll from "@/app/_components/RevealOnScroll";
 
 const StyledOtherProjectsSection = styled.section`
   display: flex;
@@ -56,17 +57,19 @@ function OtherProjects() {
   const displayedProjects = showAll ? otherProjects : otherProjects.slice(0, 3);
 
   return (
-    <StyledOtherProjectsSection id="otherProjects">
-      <h2>{header2}</h2>
-      <ul className="projects-grid">
-        {displayedProjects.map((project, i) => (
-          <Project key={i} project={project} />
-        ))}
-      </ul>
-      <Button onClick={() => setShowAll(!showAll)}>
-        {showAll ? less : more}
-      </Button>
-    </StyledOtherProjectsSection>
+    <RevealOnScroll>
+      <StyledOtherProjectsSection id="otherProjects">
+        <h2>{header2}</h2>
+        <ul className="projects-grid">
+          {displayedProjects.map((project, i) => (
+            <Project key={i} project={project} />
+          ))}
+        </ul>
+        <Button onClick={() => setShowAll(!showAll)}>
+          {showAll ? less : more}
+        </Button>
+      </StyledOtherProjectsSection>
+    </RevealOnScroll>
   );
 }
 

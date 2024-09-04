@@ -1,8 +1,11 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import ReactTypingEffect from "react-typing-effect";
 import { useLanguage } from "@/app/_context/LanguageContext";
+import WaveTitle from "@/app/_components/WaveTitle";
+import RevealOnScroll from "@/app/_components/RevealOnScroll";
 
 const StyledHeroSection = styled.section`
   display: flex;
@@ -56,20 +59,28 @@ function Hero() {
   const { config } = useLanguage();
   const { title, name, text, headers } = config.hero;
 
+  const [isInitialLoad, setIsInitialLoad] = useState(true);
+
+  useEffect(() => {
+    setIsInitialLoad(false);
+  }, []);
+
   return (
     <StyledHeroSection id="hero">
-      <h1 className="small-heading">{title}</h1>
-      <h2 className="big-heading">{name}</h2>
+      <WaveTitle title={title} customClassName="small-heading" />
+      <WaveTitle title={name} customClassName="big-heading" delay={2000} />
       <h3 className="medium-heading">
         <ReactTypingEffect
           text={headers}
           speed={80}
           eraseSpeed={50}
-          eraseDelay={3000}
-          typingDelay={500}
+          eraseDelay={1000}
+          typingDelay={isInitialLoad ? 3000 : 200}
         />
       </h3>
-      <p className="text">{text}</p>
+      <RevealOnScroll delay={4}>
+        <p className="text">{text}</p>
+      </RevealOnScroll>
     </StyledHeroSection>
   );
 }

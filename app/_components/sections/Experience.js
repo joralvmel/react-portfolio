@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { useLanguage } from "@/app/_context/LanguageContext";
 import ExperienceTabPanels from "@/app/_components/ExperienceTabPanels";
 import ExperienceTabList from "@/app/_components/ExperienceTabList";
+import RevealOnScroll from "@/app/_components/RevealOnScroll";
 
 const StyledExperienceSection = styled.section`
   max-width: 900px;
@@ -31,17 +32,21 @@ function Experience() {
   }
 
   return (
-    <StyledExperienceSection id="experience">
-      <h2 className="numbered-heading">{header}</h2>
-      <div className="inner">
-        <ExperienceTabList
-          jobs={jobs}
-          handleTabClick={handleTabClick}
-          selectedTab={selectedTab}
-        />
-        <ExperienceTabPanels jobs={jobs} selectedTab={selectedTab} />
-      </div>
-    </StyledExperienceSection>
+    <RevealOnScroll>
+      <StyledExperienceSection id="experience">
+        <h2 className="numbered-heading">{header}</h2>
+        <RevealOnScroll>
+          <div className="inner">
+            <ExperienceTabList
+              jobs={jobs}
+              handleTabClick={handleTabClick}
+              selectedTab={selectedTab}
+            />
+            <ExperienceTabPanels jobs={jobs} selectedTab={selectedTab} />
+          </div>
+        </RevealOnScroll>
+      </StyledExperienceSection>
+    </RevealOnScroll>
   );
 }
 
