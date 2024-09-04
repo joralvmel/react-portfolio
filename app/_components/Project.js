@@ -19,10 +19,11 @@ const StyledProject = styled.li`
   border-radius: 8px;
   overflow: hidden;
   list-style: none;
+  transition: transform 0.5s ease;
 
   &:hover {
     background-color: var(--color-quaternary);
-    transition: var(--transition-background);
+    transform: scale(1.05);
   }
 
   .project-info {
