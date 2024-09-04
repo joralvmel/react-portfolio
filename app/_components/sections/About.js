@@ -1,11 +1,10 @@
-import { useState } from "react";
+"use client";
 
 import styled from "styled-components";
 import Image from "next/image";
 
 import { useLanguage } from "@/app/_context/LanguageContext";
 import AboutText from "@/app/_components/AboutText";
-import Spinner from "@/app/_components/Spinner";
 import RevealOnScroll from "@/app/_components/RevealOnScroll";
 
 const StyledAboutSection = styled.section`
