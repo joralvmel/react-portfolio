@@ -69,18 +69,20 @@ function About() {
         <RevealOnScroll>
           <div className="inner">
             <AboutText text={text} skills={skills} />
-            <StyledPic>
-              {loading && <Spinner />}
-              <Image
-                src={profilePic.src}
-                alt={profilePic.alt}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                fill
-                onLoad={handleImageLoad}
-                priority
-                placeholder="blur"
-              />
-            </StyledPic>
+            <RevealOnScroll>
+              <StyledPic>
+                {loading && <Spinner />}
+                <Image
+                  src={profilePic.src}
+                  alt={profilePic.alt}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  fill
+                  onLoad={handleImageLoad}
+                  priority
+                  placeholder="blur"
+                />
+              </StyledPic>
+            </RevealOnScroll>
           </div>
         </RevealOnScroll>
       </StyledAboutSection>{" "}
