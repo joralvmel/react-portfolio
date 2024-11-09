@@ -1,11 +1,14 @@
 import AIIcon from "@/app/_components/icons/AIIcon";
+import AndroidIcon from '@/app/_components/icons/AndroidIcon'
 import APIIcon from "@/app/_components/icons/APIIcon";
 import BitbucketIcon from "@/app/_components/icons/BitbucketIcon";
 import CPlusPlusIcon from "@/app/_components/icons/CPlusPlusIcon";
 import CSSIcon from "@/app/_components/icons/CSSIcon";
+import DatabaseIcon from '@/app/_components/icons/DatabaseIcon'
 import EJSIcon from "@/app/_components/icons/EJSIcon";
 import ExcelIcon from "@/app/_components/icons/ExcelIcon";
 import FigmaIcon from "@/app/_components/icons/FigmaIcon";
+import FirebaseIcon from "@/app/_components/icons/FirebaseIcon";
 import FormsIcon from "@/app/_components/icons/FormsIcon";
 import GithubIcon from "@/app/_components/icons/GithubIcon";
 import HtmlIcon from "@/app/_components/icons/HtmlIcon";
@@ -41,6 +44,8 @@ const IconSelector = ({ tech }) => {
   switch (tech) {
     case "AI":
       return <AIIcon />;
+    case "Android":
+      return <AndroidIcon />;
     case "API":
       return <APIIcon />;
     case "Bitbucket":
@@ -49,12 +54,16 @@ const IconSelector = ({ tech }) => {
       return <CPlusPlusIcon />;
     case "CSS":
       return <CSSIcon />;
+    case "Database":
+      return <DatabaseIcon />;
     case "EJS":
       return <EJSIcon />;
     case "Microsoft Excel":
       return <ExcelIcon />;
     case "Figma":
       return <FigmaIcon />;
+    case "Firebase":
+      return <FirebaseIcon />;
     case "Google Forms":
       return <FormsIcon />;
     case "Github":

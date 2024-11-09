@@ -1,10 +1,10 @@
 "use client";
 
 import profilePic from "@/public/profile.jpg";
-import watchlist from "@/public/watchlist-api.png";
 import connectFour from "@/public/react-connect-four.png";
 import theWildOasis from "@/public/the-wild-oasis.png";
 import theWildOasisWebsite from "@/public/the-wild-oasis-website.png";
+import pokedex from "@/public/pokedex.png";
 
 import {
   FaJ,
@@ -25,7 +25,6 @@ export const configEs = {
   githubTitle: "Repositorio de GitHub",
   externalTitle: "Visitar Sitio Web",
   cv: "JorgeAlvarezCV.pdf",
-  numProjects: 3,
 
   buttons: { resume: "CV", more: "Mostrar Más", less: "Mostrar Menos" },
 
@@ -63,6 +62,7 @@ export const configEs = {
       "JavaScript",
       "React",
       "Next.js",
+      "Android",
       "HTML",
       "CSS",
       "Node.js",
@@ -95,6 +95,7 @@ export const configEs = {
           "JavaScript",
           "React",
           "Redux",
+          "jQuery",
           "HTML",
           "CSS",
           "Java",
@@ -172,6 +173,17 @@ export const configEs = {
 
     content: [
       {
+        title: "Pokedex",
+        description:
+          "Una aplicación de Android que trae el mundo de Pokémon a tu dispositivo. Con autenticación de usuario, un extenso catálogo de Pokémon y una función de favoritos.",
+        technologies: ["Java", "Android", "Firebase", "Database", "API"],
+        github: "https://github.com/joralvmel/pokedex",
+        image: {
+          src: pokedex,
+          alt: `Pokedex App`,
+        },
+      },
+      {
         title: "The Wild Oasis",
         description:
           "Una aplicación diseñada para gestionar check-ins y check-outs en un hotel boutique, incluyendo un panel de control para administradores y otras opciones de configuración para el personal del hotel.",
@@ -222,18 +234,6 @@ export const configEs = {
         },
       },
       {
-        title: "Watchlist API",
-        description:
-          "Una aplicación para llevar un registro de tus películas y programas de TV favoritos con la funcionalidad de crear listas de seguimiento y proporcionar información sobre películas o programas de TV.",
-        technologies: ["EJS", "CSS", "Node.js", "jQuery", "API"],
-        github: "https://github.com/joralvmel/watchlist-api",
-        external: "https://joralvmel-watchlist-api.onrender.com/",
-        image: {
-          src: watchlist,
-          alt: `Dashboard de la Watchlist API`,
-        },
-      },
-      {
         title: "Simon",
         description:
           "Juego de Simón dice construido con HTML, CSS y JavaScript.",
@@ -248,6 +248,14 @@ export const configEs = {
         technologies: ["EJS", "JavaScript", "CSS", "Node.js"],
         github: "https://github.com/joralvmel/watchlist-app",
         external: "https://joralvmel-watchlist-app.onrender.com/",
+      },
+      {
+        title: "Watchlist API",
+        description:
+          "Una aplicación para llevar un registro de tus películas y programas de TV favoritos con la funcionalidad de crear listas de seguimiento y proporcionar información sobre películas o programas de TV.",
+        technologies: ["EJS", "CSS", "Node.js", "jQuery", "API"],
+        github: "https://github.com/joralvmel/watchlist-api",
+        external: "https://joralvmel-watchlist-api.onrender.com/",
       },
       {
         title: "Forkify",

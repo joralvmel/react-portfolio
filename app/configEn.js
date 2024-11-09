@@ -1,10 +1,10 @@
 "use client";
 
 import profilePic from "@/public/profile.jpg";
-import watchlist from "@/public/watchlist-api.png";
 import connectFour from "@/public/react-connect-four.png";
 import theWildOasis from "@/public/the-wild-oasis.png";
 import theWildOasisWebsite from "@/public/the-wild-oasis-website.png";
+import pokedex from "@/public/pokedex.png";
 
 import {
   FaJ,
@@ -62,6 +62,7 @@ export const configEn = {
       "JavaScript",
       "React",
       "Next.js",
+      "Android",
       "HTML",
       "CSS",
       "Node.js",
@@ -94,6 +95,7 @@ export const configEn = {
           "JavaScript",
           "React",
           "Redux",
+          "jQuery",
           "HTML",
           "CSS",
           "Java",
@@ -171,6 +173,17 @@ export const configEn = {
 
     content: [
       {
+        title: "Pokedex",
+        description:
+          "An Android application that brings the world of Pokémon to your device! With user authentication, an extensive Pokémon catalog, and a favorites feature.",
+        technologies: ["Java", "Android", "Firebase", "Database", "API"],
+        github: "https://github.com/joralvmel/pokedex",
+        image: {
+          src: pokedex,
+          alt: `Pokedex App`,
+        },
+      },
+      {
         title: "The Wild Oasis",
         description:
           "An application designed for managing check-ins and check-outs in a boutique hotel, including a dashboard for administrators and other configuration options for the hotel staff.",
@@ -221,18 +234,6 @@ export const configEn = {
         },
       },
       {
-        title: "Watchlist API",
-        description:
-          "An application for keeping track of your favorite Movies and TV Shows with the functionality of creating Watchlists, and providing Movie or TV Show information.",
-        technologies: ["EJS", "CSS", "Node.js", "jQuery", "API"],
-        github: "https://github.com/joralvmel/watchlist-api",
-        external: "https://joralvmel-watchlist-api.onrender.com/",
-        image: {
-          src: watchlist,
-          alt: `Watchlist API Dashboard`,
-        },
-      },
-      {
         title: "Simon",
         description: "Simon says game built with HTML, CSS, and JavaScript.",
         technologies: ["HTML", "CSS", "JavaScript"],
@@ -246,6 +247,14 @@ export const configEn = {
         technologies: ["EJS", "JavaScript", "CSS", "Node.js"],
         github: "https://github.com/joralvmel/watchlist-app",
         external: "https://joralvmel-watchlist-app.onrender.com/",
+      },
+      {
+        title: "Watchlist API",
+        description:
+          "An application for keeping track of your favorite Movies and TV Shows with the functionality of creating Watchlists, and providing Movie or TV Show information.",
+        technologies: ["EJS", "CSS", "Node.js", "jQuery", "API"],
+        github: "https://github.com/joralvmel/watchlist-api",
+        external: "https://joralvmel-watchlist-api.onrender.com/",
       },
       {
         title: "Forkify",
