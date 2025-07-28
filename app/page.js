@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Layout from "@/app/_components/Layout";
 import Hero from "@/app/_components/sections/Hero";
 import About from "@/app/_components/sections/About";
+import Education from "@/app/_components/sections/Education";
 import Experience from "@/app/_components/sections/Experience";
 import Projects from "@/app/_components/sections/Projects";
 import OtherProjects from "@/app/_components/sections/OtherProjects";
@@ -24,6 +25,7 @@ export default function Home() {
       <StyledMainContainer>
         <Hero />
         <About />
+        <Education />
         <Experience />
         <Projects />
         <OtherProjects />

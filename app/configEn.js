@@ -80,6 +80,40 @@ export const configEn = {
     },
   },
 
+  education: {
+    header: "Education",
+    schools: [
+      {
+        institution: "Universidad Politécnica de Madrid",
+        degree: "Master's in Web Engineering",
+        startDate: "2024",
+        endDate: "2025",
+        description: [
+          "Comprehensive training in modern web development technologies and methodologies",
+          "Coursework included: Front-End development, Back-End technologies, Mobile development, Database systems, and Web Security",
+          "Capstone project: Recipe Management Comparison - A full-stack application comparing React and Angular implementations"
+        ],
+        technologies: [
+          "JavaScript", "TypeScript", "Angular", "React",
+          "Java", "Spring", "PHP", ".NET", "Android",
+          "MongoDB"
+        ]
+      },
+      {
+        institution: "Tecnológico de Monterrey",
+        degree: "Bachelor's in Mechatronics Engineering",
+        startDate: "2016",
+        endDate: "2020",
+        description: [
+          "Engineering foundation with focus on automation, robotics, and control systems",
+          "Developed problem-solving skills and technical knowledge applicable across engineering disciplines",
+          "Gained experience with programming fundamentals and system design"
+        ],
+        technologies: ["Python", "C++", "Robotics", "MatLab", "Solidworks"]
+      }
+    ]
+  },
+
   experience: {
     header: "Experience",
     jobs: [
@@ -366,6 +400,10 @@ export const configEn = {
     {
       content: "About",
       url: "/#about",
+    },
+    {
+      content: "Education",
+      url: "/#education",
     },
     {
       content: "Experience",

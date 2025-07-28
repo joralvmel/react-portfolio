@@ -2,7 +2,7 @@
 
 import styled from "styled-components";
 
-const StyledExperienceTabList = styled.div`
+const StyledTabList = styled.div`
   position: relative;
   width: max-content;
 
@@ -48,20 +48,20 @@ const StyledTabButton = styled.button`
   }
 `;
 
-function ExperienceTabList({ jobs, handleTabClick, selectedTab }) {
+function TabList({ items, handleTabClick, selectedTab, tabLabelKey }) {
   return (
-    <StyledExperienceTabList>
-      {jobs.map(({ company }, i) => (
-        <StyledTabButton
-          key={i}
-          onClick={() => handleTabClick(i)}
-          className={selectedTab === i ? "selected" : ""}
-        >
-          {company}
-        </StyledTabButton>
-      ))}
-    </StyledExperienceTabList>
+      <StyledTabList>
+        {items.map((item, i) => (
+            <StyledTabButton
+                key={i}
+                onClick={() => handleTabClick(i)}
+                className={selectedTab === i ? "selected" : ""}
+            >
+              {item[tabLabelKey]}
+            </StyledTabButton>
+        ))}
+      </StyledTabList>
   );
 }
 
-export default ExperienceTabList;
+export default TabList;

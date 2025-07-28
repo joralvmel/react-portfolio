@@ -6,6 +6,7 @@ import BitbucketIcon from "@/app/_components/icons/BitbucketIcon";
 import CPlusPlusIcon from "@/app/_components/icons/CPlusPlusIcon";
 import CSSIcon from "@/app/_components/icons/CSSIcon";
 import DatabaseIcon from '@/app/_components/icons/DatabaseIcon'
+import DotNetIcon from "@/app/_components/icons/DotNetIcon";
 import EJSIcon from "@/app/_components/icons/EJSIcon";
 import ExcelIcon from "@/app/_components/icons/ExcelIcon";
 import FigmaIcon from "@/app/_components/icons/FigmaIcon";
@@ -17,6 +18,7 @@ import JavaIcon from "@/app/_components/icons/JavaIcon";
 import JavaScriptIcon from "@/app/_components/icons/JavaScriptIcon";
 import JiraIcon from "@/app/_components/icons/JiraIcon";
 import JqueryIcon from "@/app/_components/icons/JqueryIcon";
+import MatlabIcon from "@/app/_components/icons/MatlabIcon";
 import MiroIcon from "@/app/_components/icons/MiroIcon";
 import MongoDBIcon from "@/app/_components/icons/MongoDBIcon";
 import NextAuthIcon from "@/app/_components/icons/NextAuthIcon";
@@ -35,6 +37,7 @@ import RechartsIcon from "@/app/_components/icons/RechartsIcon";
 import ReduxIcon from "@/app/_components/icons/ReduxIcon";
 import SCSSIcon from "@/app/_components/icons/SCSSIcon";
 import SolidworksIcon from "@/app/_components/icons/SolidworksIcon";
+import SpringIcon from "@/app/_components/icons/SpringIcon";
 import StyledComponentsIcon from "@/app/_components/icons/StyledComponentsIcon";
 import SupabaseIcon from "@/app/_components/icons/SupabaseIcon";
 import SwaggerIcon from "@/app/_components/icons/SwaggerIcon";
@@ -63,6 +66,10 @@ const IconSelector = ({ tech }) => {
       return <CSSIcon />;
     case "Database":
       return <DatabaseIcon />;
+    case "MatLab":
+      return <MatlabIcon />;
+    case ".NET":
+      return <DotNetIcon />;
     case "EJS":
       return <EJSIcon />;
     case "Microsoft Excel":
@@ -117,10 +124,14 @@ const IconSelector = ({ tech }) => {
       return <RechartsIcon />;
     case "Redux":
       return <ReduxIcon />;
+    case "Robotics":
+      return <VexcodeIcon />;
     case "SCSS":
       return <SCSSIcon />;
     case "Solidworks":
       return <SolidworksIcon />;
+     case "Spring":
+      return <SpringIcon />;
     case "Styled Components":
       return <StyledComponentsIcon />;
     case "Supabase":

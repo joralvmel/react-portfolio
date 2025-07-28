@@ -80,6 +80,40 @@ export const configEs = {
     },
   },
 
+  education: {
+    header: "Educación",
+    schools: [
+      {
+        institution: "Universidad Politécnica de Madrid",
+        degree: "Máster en Ingeniería Web",
+        startDate: "2024",
+        endDate: "2025",
+        description: [
+          "Formación integral en tecnologías y metodologías modernas de desarrollo web",
+          "El programa incluye: desarrollo Front-End, tecnologías Back-End, desarrollo Móvil, sistemas de Bases de Datos y Seguridad Web",
+          "Proyecto final: Comparación de Gestión de Recetas - Una aplicación full-stack que compara implementaciones en React y Angular"
+        ],
+        technologies: [
+          "JavaScript", "TypeScript", "Angular", "React",
+          "Java", "Spring", "PHP", ".NET", "Android",
+          "MongoDB"
+        ]
+      },
+      {
+        institution: "Tecnológico de Monterrey",
+        degree: "Licenciatura en Ingeniería Mecatrónica",
+        startDate: "2016",
+        endDate: "2020",
+        description: [
+          "Base de ingeniería con enfoque en automatización, robótica y sistemas de control",
+          "Desarrollé habilidades de resolución de problemas y conocimientos técnicos aplicables a diversas disciplinas de ingeniería",
+          "Adquirí experiencia con fundamentos de programación y diseño de sistemas"
+        ],
+        technologies: ["Python", "C++", "Robotics", "MatLab", "Solidworks"]
+      }
+    ]
+  },
+
   experience: {
     header: "Experiencia",
     jobs: [
