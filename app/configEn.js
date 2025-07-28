@@ -1,10 +1,10 @@
 "use client";
 
 import profilePic from "@/public/profile.jpg";
-import connectFour from "@/public/react-connect-four.png";
 import theWildOasis from "@/public/the-wild-oasis.png";
-import theWildOasisWebsite from "@/public/the-wild-oasis-website.png";
 import pokedex from "@/public/pokedex.png";
+import recipe from "@/public/recipe-management-comparison.gif";
+import space from "@/public/space-battle.png";
 
 import {
   FaJ,
@@ -59,8 +59,10 @@ export const configEn = {
       "Here are a few technologies I've been working with recently:",
     ],
     skills: [
+      "TypeScript",
       "JavaScript",
       "React",
+      "Angular",
       "Next.js",
       "Android",
       "HTML",
@@ -68,6 +70,9 @@ export const configEn = {
       "Node.js",
       "Java",
       "Npm",
+      "Github",
+      "Postman",
+      "MongoDB",
     ],
     profilePic: {
       src: profilePic,
@@ -93,6 +98,7 @@ export const configEn = {
 
         technologies: [
           "JavaScript",
+          "TypeScript",
           "React",
           "Redux",
           "jQuery",
@@ -173,6 +179,30 @@ export const configEn = {
 
     content: [
       {
+        title: "Recipe Management Comparison",
+        description:
+            "A recipe management application that allows users to search and filter recipes. It includes user authentication, favorites and reviews features, and a comprehensive recipe catalog.",
+        technologies: ["TypeScript", "React", "Angular", "Node.js", "MongoDB", "API", "SCSS", "Swagger", "Github", "Postman"],
+        github: "https://github.com/joralvmel/recipe-management-comparison",
+        external: "https://recipe-management-comparison-angular.netlify.app/",
+        image: {
+          src: recipe,
+          alt: `Recipe Management Comparison`,
+        },
+      },
+      {
+        title: "Space Battle Angular",
+        description:
+            "A space battle game built with Angular, where players can control a spaceship and engage in battles against alien enemies using lasers.",
+        technologies: ["Angular", "TypeScript", "HTML", "CSS"],
+        github: "https://github.com/joralvmel/space-battle-angular",
+        external: "https://space-battle-angular.netlify.app/",
+        image: {
+          src: space,
+          alt: `Space Battle Angular`,
+        },
+      },
+      {
         title: "Pokedex",
         description:
           "An Android application that brings the world of Pokémon to your device! With user authentication, an extensive Pokémon catalog, and a favorites feature.",
@@ -216,10 +246,14 @@ export const configEn = {
         ],
         github: "https://github.com/joralvmel/the-wild-oasis-website",
         external: "https://the-wild-oasis-website-eta-eight.vercel.app/",
-        image: {
-          src: theWildOasisWebsite,
-          alt: `The Wild Oasis main screen`,
-        },
+      },
+      {
+        title: "Space Battle",
+        description:
+            "A space battle game built with Angular, where players can control a spaceship and engage in battles against alien enemies using lasers.",
+        technologies: ["JavaScript", "HTML", "CSS"],
+        github: "https://github.com/joralvmel/space-battle",
+        external: "https://joralvmel.github.io/space-battle/",
       },
       {
         title: "React Connect Four",
@@ -228,10 +262,6 @@ export const configEn = {
         technologies: ["React", "CSS", "Node.js"],
         github: "https://github.com/joralvmel/react-connect-four",
         external: "https://react-conncect-four-joralvmel.netlify.app/",
-        image: {
-          src: connectFour,
-          alt: `Connect Four Game`,
-        },
       },
       {
         title: "Simon",

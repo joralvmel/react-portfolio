@@ -123,6 +123,7 @@ function Project({ project }) {
             target="_blank"
             rel="noopener noreferrer"
             title={title}
+            style={{ display: 'block', width: '100%' }}
           >
             <Image
               src={image.src}
@@ -132,7 +133,13 @@ function Project({ project }) {
                 width: "100%",
                 height: "auto",
               }}
-              placeholder="blur"
+              placeholder={typeof image.src === 'string' && image.src.endsWith('.gif')
+                  ? undefined
+                  : (typeof image.src === 'object' && image.src.src && image.src.src.includes('.gif'))
+                      ? undefined
+                      : "blur"
+              }
+              blurDataURL={image.blurDataURL}
             />
           </a>
         </StyledPic>
