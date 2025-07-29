@@ -404,6 +404,10 @@ export const configEs = {
       url: "/#about",
     },
     {
+      content: "Educación",
+      url: "/#education",
+    },
+    {
       content: "Experiencia",
       url: "/#experience",
     },
