@@ -120,7 +120,7 @@ export const configEs = {
       {
         company: "Solera",
         position: "Software Developer Engineer",
-        startDate: "Junio 2021",
+        startDate: "Octubre 2022",
         endDate: "Presente",
         description: [
           "Modernización de aplicaciones Omnitracs utilizando técnicas contemporáneas de React, JavaScript y estilos.",
