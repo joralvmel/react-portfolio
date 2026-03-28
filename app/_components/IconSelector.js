@@ -9,6 +9,7 @@ import DatabaseIcon from '@/app/_components/icons/DatabaseIcon'
 import DotNetIcon from "@/app/_components/icons/DotNetIcon";
 import EJSIcon from "@/app/_components/icons/EJSIcon";
 import ExcelIcon from "@/app/_components/icons/ExcelIcon";
+import ExpoDevIcon from "@/app/_components/icons/ExpoDevIcon";
 import FigmaIcon from "@/app/_components/icons/FigmaIcon";
 import FirebaseIcon from "@/app/_components/icons/FirebaseIcon";
 import FormsIcon from "@/app/_components/icons/FormsIcon";
@@ -32,6 +33,7 @@ import PowerPointIcon from "@/app/_components/icons/PowerPointIcon";
 import PrinterIcon from "@/app/_components/icons/PrinterIcon";
 import PythonIcon from "@/app/_components/icons/PythonIcon";
 import ReactIcon from "@/app/_components/icons/ReactIcon";
+import ReactNativeAppIcon from "@/app/_components/icons/ReactNativeAppIcon";
 import ReactQueryIcon from "@/app/_components/icons/ReactQueryIcon";
 import RechartsIcon from "@/app/_components/icons/RechartsIcon";
 import ReduxIcon from "@/app/_components/icons/ReduxIcon";
@@ -47,6 +49,7 @@ import TypescriptIcon from "@/app/_components/icons/TypeScriptIcon";
 import UltimakerCuraIcon from "@/app/_components/icons/UltimakerCuraIcon";
 import VexcodeIcon from "@/app/_components/icons/VexcodeIcon";
 import WordIcon from "@/app/_components/icons/WordIcon";
+import ZustandIcon from "@/app/_components/icons/ZustandIcon";
 
 const IconSelector = ({ tech }) => {
   switch (tech) {
@@ -118,6 +121,8 @@ const IconSelector = ({ tech }) => {
       return <PythonIcon />;
     case "React":
       return <ReactIcon />;
+    case "React Native":
+      return <ReactNativeAppIcon />;
     case "React Query":
       return <ReactQueryIcon />;
     case "Recharts":
@@ -140,10 +145,16 @@ const IconSelector = ({ tech }) => {
         return <SwaggerIcon />;
     case "Tailwind CSS":
       return <TailwindIcon />;
+    case "NativeWind":
+      return <TailwindIcon />;
+    case "Expo":
+      return <ExpoDevIcon />;
     case "Tkinter":
       return <TkIcon />;
     case "TypeScript":
       return <TypescriptIcon />;
+    case "Zustand":
+      return <ZustandIcon />;
     case "UltiMaker Cura":
       return <UltimakerCuraIcon />;
     case "VEXcode VR":

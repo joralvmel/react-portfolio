@@ -1,8 +1,8 @@
 "use client";
 
 import profilePic from "@/public/profile.jpg";
-import theWildOasis from "@/public/the-wild-oasis.png";
 import pokedex from "@/public/pokedex.png";
+import cocinia from "@/public/cocinia.png";
 import recipe from "@/public/recipe-management-comparison.gif";
 import space from "@/public/space-battle.png";
 
@@ -123,11 +123,10 @@ export const configEn = {
         startDate: "October 2022",
         endDate: "Present",
         description: [
-          "Modernizing Omnitracs applications utilizing contemporary React, JavaScript, and styling techniques.",
-          "Collaborated on the development, maintenance, and continuous improvement of Qapter Claims Application.",
-          "Identified and rectified errors promptly to ensure smooth and efficient operation.",
-          "Worked closely with the team following Agile practices to understand project requirements and ensure timely delivery of    high-quality solutions.",
-          "Participated in code review sessions to enforce best development practices and maintain clean and efficient code.",
+          "Maintained and enhanced Qapter Claims and Omnitracs systems; modernized legacy applications using React and JavaScript.",
+          "Designed and built an internal React component library with TypeScript and React, improving consistency and reusability across teams.",
+          "Developed a fleet management POC and a full-stack fleet dashboard application, following Figma mockups.",
+          "Collaborated in agile teams with regular code reviews, ensuring high code quality standards.",
         ],
 
         technologies: [
@@ -135,14 +134,13 @@ export const configEn = {
           "TypeScript",
           "React",
           "Redux",
-          "jQuery",
+          "Zustand",
+          "Tailwind CSS",
           "HTML",
           "CSS",
           "Java",
           "Node.js",
-          "Postman",
           "Jira",
-          "Bitbucket",
           "Figma",
         ],
       },
@@ -213,6 +211,18 @@ export const configEn = {
 
     content: [
       {
+        title: "CocinIA",
+        description:
+            "AI-powered cooking assistant mobile app focused on personalized recipe generation, weekly meal planning, and smart shopping lists.",
+        technologies: ["Expo", "React", "React Native", "TypeScript", "Supabase", "Zustand", "NativeWind", "Figma", "AI"],
+        github: "https://github.com/joralvmel/cocinIA-web",
+        external: "https://cocinia.online/",
+        image: {
+          src: cocinia,
+          alt: `CocinIA Mobile App`,
+        },
+      },
+      {
         title: "Recipe Management Comparison",
         description:
             "A recipe management application that allows users to search and filter recipes. It includes user authentication, favorites and reviews features, and a comprehensive recipe catalog.",
@@ -261,10 +271,6 @@ export const configEn = {
         ],
         github: "https://github.com/joralvmel/react-the-wild-oasis",
         external: "https://react-the-wild-oasis-nine.vercel.app/",
-        image: {
-          src: theWildOasis,
-          alt: `The Wild Oasis Dashboard`,
-        },
       },
       {
         title: "The Wild Oasis Website",

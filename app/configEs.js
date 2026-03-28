@@ -1,8 +1,8 @@
 "use client";
 
 import profilePic from "@/public/profile.jpg";
-import theWildOasis from "@/public/the-wild-oasis.png";
 import pokedex from "@/public/pokedex.png";
+import cocinia from "@/public/cocinia.png";
 import recipe from "@/public/recipe-management-comparison.gif";
 import space from "@/public/space-battle.png";
 
@@ -123,11 +123,10 @@ export const configEs = {
         startDate: "Octubre 2022",
         endDate: "Presente",
         description: [
-          "Modernización de aplicaciones Omnitracs utilizando técnicas contemporáneas de React, JavaScript y estilos.",
-          "Colaboración en el desarrollo, mantenimiento y mejora continua de la aplicación Qapter Claims.",
-          "Identificación y corrección de errores de manera oportuna para asegurar una operación fluida y eficiente.",
-          "Trabajo cercano con el equipo siguiendo prácticas Ágiles para entender los requisitos del proyecto y asegurar la entrega oportuna de soluciones de alta calidad.",
-          "Participación en sesiones de revisión de código para aplicar las mejores prácticas de desarrollo y mantener un código limpio y eficiente.",
+          "Mantenimiento y mejora de los sistemas Qapter Claims y Omnitracs; modernización de aplicaciones legacy usando React y JavaScript.",
+          "Diseño y construcción de una librería interna de componentes en React con TypeScript, mejorando consistencia y reutilización entre equipos.",
+          "Desarrollo de un POC de gestión de flotas y una aplicación full-stack de dashboard de flotas, siguiendo mockups en Figma.",
+          "Colaboración en equipos ágiles con code reviews regulares, asegurando altos estándares de calidad de código.",
         ],
 
         technologies: [
@@ -135,14 +134,13 @@ export const configEs = {
           "TypeScript",
           "React",
           "Redux",
-          "jQuery",
+          "Zustand",
+          "Tailwind CSS",
           "HTML",
           "CSS",
           "Java",
           "Node.js",
-          "Postman",
           "Jira",
-          "Bitbucket",
           "Figma",
         ],
       },
@@ -213,6 +211,18 @@ export const configEs = {
 
     content: [
       {
+        title: "CocinIA",
+        description:
+            "Aplicación móvil de asistente de cocina impulsado por IA enfocada en generación de recetas personalizadas, planificación semanal y listas de compra inteligentes.",
+        technologies: ["Expo", "React", "React Native", "TypeScript", "Supabase", "Zustand", "NativeWind", "Figma", "AI"],
+        github: "https://github.com/joralvmel/cocinIA-web",
+        external: "https://cocinia.online/",
+        image: {
+          src: cocinia,
+          alt: `App móvil de CocinIA`,
+        },
+      },
+      {
         title: "Recipe Management Comparison",
         description:
             "Una aplicación de gestión de recetas que permite a los usuarios buscar y filtrar recetas. Incluye autenticación de usuarios, funciones de favoritos y reseñas, y un catálogo completo de recetas.",
@@ -261,10 +271,6 @@ export const configEs = {
         ],
         github: "https://github.com/joralvmel/react-the-wild-oasis",
         external: "https://react-the-wild-oasis-nine.vercel.app/",
-        image: {
-          src: theWildOasis,
-          alt: `Dashboard de The Wild Oasis`,
-        },
       },
       {
         title: "The Wild Oasis Website",

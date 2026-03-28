@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import styled from "styled-components";
-import ReactTypingEffect from "react-typing-effect";
 import { useLanguage } from "@/app/_context/LanguageContext";
 import WaveTitle from "@/app/_components/WaveTitle";
 import RevealOnScroll from "@/app/_components/RevealOnScroll";
@@ -60,23 +59,54 @@ function Hero() {
   const { title, name, text, headers } = config.hero;
 
   const [isInitialLoad, setIsInitialLoad] = useState(true);
+  const [typedText, setTypedText] = useState("");
+  const [headerIndex, setHeaderIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
     setIsInitialLoad(false);
   }, []);
+
+  useEffect(() => {
+    if (!headers?.length) return;
+
+    const currentHeader = headers[headerIndex] ?? "";
+    const isTyping = !isDeleting;
+
+    const timeout = setTimeout(
+      () => {
+        if (isTyping) {
+          const nextChar = charIndex + 1;
+          setTypedText(currentHeader.slice(0, nextChar));
+          setCharIndex(nextChar);
+
+          if (nextChar >= currentHeader.length) {
+            setTimeout(() => setIsDeleting(true), 800);
+          }
+        } else {
+          const nextChar = Math.max(0, charIndex - 1);
+          setTypedText(currentHeader.slice(0, nextChar));
+          setCharIndex(nextChar);
+
+          if (nextChar === 0) {
+            setIsDeleting(false);
+            setHeaderIndex((prev) => (prev + 1) % headers.length);
+          }
+        }
+      },
+      isTyping ? 70 : 40
+    );
+
+    return () => clearTimeout(timeout);
+  }, [charIndex, headerIndex, headers, isDeleting]);
 
   return (
     <StyledHeroSection id="hero">
       <WaveTitle title={title} customClassName="small-heading" />
       <WaveTitle title={name} customClassName="big-heading" delay={2000} />
       <h3 className="medium-heading">
-        <ReactTypingEffect
-          text={headers}
-          speed={80}
-          eraseSpeed={50}
-          eraseDelay={1000}
-          typingDelay={isInitialLoad ? 3000 : 200}
-        />
+        <span>{isInitialLoad ? "" : typedText}</span>
       </h3>
       <RevealOnScroll delay={4}>
         <p className="text">{text}</p>
